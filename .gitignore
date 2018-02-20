@@ -1,3 +1,4 @@
 /.idea
+/.phpstorm.meta.php
 /vendor
 /composer.lock
