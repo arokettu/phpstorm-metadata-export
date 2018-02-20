@@ -1,0 +1,27 @@
+{
+    "name": "sandfoxme/phpstorm-metadata-export",
+    "description": "Export PhpStorm Advanced Metadata from DI containers",
+    "keywords": ["dependency injection", "phpstorm", "pimple", "slim", "silex"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Smirnov",
+            "email": "sandfox@sandfox.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SandFoxMe\\PhpStorm\\Metadata\\": "src"
+        }
+    },
+    "require": {
+        "php": ">= 7.0"
+    },
+    "require-dev": {
+        "psy/psysh":        "*",
+        "pimple/pimple":    "^3.0",
+        "slim/slim":        "^3.0",
+        "silex/silex":      "^2.0"
+    }
+}
