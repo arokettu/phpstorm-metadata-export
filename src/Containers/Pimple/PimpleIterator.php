@@ -3,6 +3,7 @@
 namespace SandFoxMe\PhpStorm\Metadata\Containers\Pimple;
 
 use Pimple\Container;
+use SandFoxMe\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFoxMe\PhpStorm\Metadata\Containers\ContainerIterator;
 
 class PimpleIterator implements ContainerIterator
@@ -21,7 +22,7 @@ class PimpleIterator implements ContainerIterator
     {
         $this->pimple->keys();
         foreach ($this->pimple->keys() as $key) {
-            yield $key => $this->pimple[$key];
+            yield $key => TypeStrings::getTypeStringByInstance($this->pimple[$key]);
         }
     }
 }
