@@ -22,15 +22,19 @@ class ContainerExportMiddleware
         try {
             return $next($request, $response);
         } finally {
-            // try to find root path of the project (parent of vendor)
-            // remove path postfix vendor/sandfoxme/phpstorm-metadata-export/src/Integration/Slim
-            $filename = $this->options['filename'] ??
-                realpath(__DIR__ . '/../../../../../..') .
-                '/.phpstorm.meta.php/sandfoxme_container_export_slim.meta.php';
+            try {
+                // try to find root path of the project (parent of vendor)
+                // remove path postfix vendor/sandfoxme/phpstorm-metadata-export/src/Integration/Slim
+                $filename = $this->options['filename'] ??
+                    realpath(__DIR__ . '/../../../../../..') .
+                    '/.phpstorm.meta.php/sandfoxme_container_export_slim.meta.php';
 
-            unset($this->options['filename']);
+                unset($this->options['filename']);
 
-            Generator::store($filename, [$this->container]);
+                Generator::store($filename, [$this->container]);
+            } catch (\Throwable $e) {
+                // ignore
+            }
         }
     }
 }
