@@ -5,7 +5,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg)](https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export)
 
 Export [PhpStorm Advanced Metadata](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata)
-from DI containers to enable autocomplete.
+from DI containers to enable code completion.
 
 The library is inspired by [Pimple Container Dumper](https://github.com/Sorien/silex-pimple-dumper) for Silex but
 doesn't require IDE plugin because it uses native PhpStorm export format. It also supports Slim and is extensible to
