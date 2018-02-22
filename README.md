@@ -1,5 +1,9 @@
 # PhpStorm Metadata Export
 
+[![Packagist](https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg)](https://packagist.org/packages/sandfoxme/phpstorm-metadata-export)
+[![license](https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg)](https://opensource.org/licenses/MIT)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg)](https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export)
+
 Export [PhpStorm Advanced Metadata](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata)
 from DI containers to enable autocomplete.
 
