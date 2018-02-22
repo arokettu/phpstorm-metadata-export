@@ -27,7 +27,6 @@ class PimpleIterator implements ContainerIterator
      */
     public function getIterator(): \Traversable
     {
-        $this->pimple->keys();
         foreach ($this->pimple->keys() as $key) {
             yield $key => TypeStrings::getTypeStringByInstance($this->pimple[$key]);
         }
