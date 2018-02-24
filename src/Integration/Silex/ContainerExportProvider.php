@@ -26,10 +26,11 @@ class ContainerExportProvider implements ServiceProviderInterface, BootableProvi
     {
         if (!$app['phpstorm.metadata.only_debug'] || $app['debug']) {
             $app->finish(function () use ($app) {
+                $filename = $app['phpstorm.metadata.filename'];
                 try {
-                    Generator::store($app['phpstorm.metadata.filename'], [$app], $app['phpstorm.metadata.options']);
+                    Generator::store($filename, [$app], $app['phpstorm.metadata.options']);
                 } catch (\Throwable $e) {
-                    // ignore
+                    file_put_contents($filename, "Exception: " . get_class($e) . "\n" . $e->getMessage());
                 }
             }, Application::LATE_EVENT);
         }
