@@ -29,9 +29,7 @@ class ContainerExportMiddleware
                     realpath(__DIR__ . '/../../../../../..') .
                     '/.phpstorm.meta.php/sandfoxme_container_export_slim.meta.php';
 
-                unset($this->options['filename']);
-
-                Generator::store($filename, [$this->container]);
+                Generator::store($filename, [$this->container], $this->options['options'] ?? []);
             } catch (\Throwable $e) {
                 // ignore
             }
