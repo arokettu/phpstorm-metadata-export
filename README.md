@@ -69,6 +69,28 @@ $app->register(new ContainerExportProvider(), [
 ]);
 ```
 
+### Psr15
+
+Version 1.1 adds Psr15 compliant middleware implementation. It generally uses the same approach as Slim Middleware.
+The classname is `SandFoxMe\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware`.
+
+```php
+<?php
+
+use SandFoxMe\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware;
+
+$middleware = new ContainerExportMiddleware($container);
+
+// You can also override metadata filename like this
+$middleware = new ContainerExportMiddleware($container, [
+    // it is a good idea to use full path here
+    'filename' => '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
+]);
+
+// Register middleware the way your compliant framework allows it
+$myPsr15CompliantApp->registerMiddleware($middleware);
+```
+
 ## License
 
 The library is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
