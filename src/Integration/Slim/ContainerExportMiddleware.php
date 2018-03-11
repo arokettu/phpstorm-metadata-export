@@ -17,7 +17,7 @@ class ContainerExportMiddleware
         $this->options   = $options;
     }
 
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next): ResponseInterface
     {
         try {
             return $next($request, $response);
