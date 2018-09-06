@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+*2018-09-06*
+
+* Add support for Zend ServiceManager
+
 ## 1.1.0
 
 *2018-03-03*
