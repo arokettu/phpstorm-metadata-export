@@ -6,6 +6,8 @@ use Pimple\Container as Pimple;
 use SandFoxMe\PhpStorm\Metadata\Common\Metadata;
 use SandFoxMe\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
 use SandFoxMe\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
+use SandFoxMe\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
+use Zend\ServiceManager\ServiceManager;
 
 abstract class Generator
 {
@@ -73,6 +75,10 @@ abstract class Generator
 
         if ($container instanceof Pimple) {
             return PimpleIterator::class;
+        }
+
+        if ($container instanceof ServiceManager) {
+            return ServiceManagerIterator::class;
         }
 
         throw new \RuntimeException('Unsupported container');
