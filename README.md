@@ -19,13 +19,51 @@ Install by composer
 composer require sandfoxme/phpstorm-metadata-export --dev
 ```
 
+## Containers
+
+### Pimple
+
+The library has full support for the Pimple DI version 3.*
+
+### Zend ServiceManager
+
+The library has partial support for the Zend ServiceManager. Please note that there's no open and public way
+of iterating over SM entries so the implementation is tied to the internal structure not covered by
+the semantic version compatibility promise. Feel free to open an issue if it is broken for some scenario
+
+Obviously the implementation also cannot create hints for abstract factories
+
+The library is tested against Zend SM version 3.3 and should work with any 3.* version
+
 ## Usage
 
-The library supports Pimple DI and has integration classes available for Slim and Silex.
+The library has integration classes available for Slim and Silex.
 By default exporter will create directory `.phpstorm.meta.php` in the root path of your project 
 (where `vendor` directory is) and put metadata file to it on every request.
 It is a good idea to enable integration components only in development environment.
 Don't forget to gitignore your `.phpstorm.meta.php` directory.
+
+### Using Generator directly
+
+```php
+<?php
+
+use SandFoxMe\PhpStorm\Metadata\Generator;
+
+$container = new Container();
+
+file_put_contents(
+    '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
+    Generator::get([$container])
+);
+
+// OR
+
+Generator::store(
+    '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
+    [$container]
+);
+```
 
 ### Slim
 
