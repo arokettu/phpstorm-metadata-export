@@ -27,25 +27,22 @@ class ServiceManagerIterator implements ContainerIterator
      */
     public function getIterator(): \Traversable
     {
-        $keysFunc = function () {
-            $keys = array_unique(array_merge(
-                array_keys($this->aliases),
-                array_keys($this->services),
-                array_keys($this->factories)
-            ));
+        $servicesFunc = function () {
+            $services = $this->resolvedAliases;
 
-            return $keys;
+            foreach ($this->factories as $factory) {
+                if (class_exists($factory)) {
+                    $services[$factory] = $factory;
+                }
+            }
+
+            return $services;
         };
 
-        $keys = ($keysFunc->bindTo($this->serviceManager, $this->serviceManager))();
+        $services = ($servicesFunc->bindTo($this->serviceManager, ServiceManager::class))();
 
-        foreach ($keys as $key) {
-            try {
-                yield $key => TypeStrings::getTypeStringByInstance(@$this->serviceManager->get($key));
-            } catch (\Throwable $exception) {
-                yield $key => TypeStrings::getTypeStringByInstance($exception) .
-                    ' /* Error message: "' . $exception->getMessage() . '" */';
-            }
+        foreach ($services as $key => $class) {
+            yield $key => TypeStrings::getTypeStringByTypeName($class);
         }
     }
 }
