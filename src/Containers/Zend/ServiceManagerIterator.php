@@ -28,13 +28,18 @@ class ServiceManagerIterator implements ContainerIterator
     public function getIterator(): \Traversable
     {
         $servicesFunc = function () {
-            $services = $this->resolvedAliases;
+            $services = [];
+
+            foreach ($this->resolvedAliases as $key => $class) {
+                $services[$key]     = $class;
+                $services[$class]   = $class;
+            }
 
             foreach ($this->factories as $factory) {
-                if (class_exists($factory)) {
-                    $services[$factory] = $factory;
-                }
+                $services[$factory] = $factory;
             }
+
+            ksort($services);
 
             return $services;
         };
