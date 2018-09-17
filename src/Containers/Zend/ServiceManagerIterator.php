@@ -41,7 +41,7 @@ class ServiceManagerIterator implements ContainerIterator
 
         foreach ($keys as $key) {
             try {
-                yield $key => TypeStrings::getTypeStringByInstance($this->serviceManager->get($key));
+                yield $key => TypeStrings::getTypeStringByInstance(@$this->serviceManager->get($key));
             } catch (\Throwable $exception) {
                 yield $key => TypeStrings::getTypeStringByInstance($exception) .
                     ' /* Error message: "' . $exception->getMessage() . '" */';
