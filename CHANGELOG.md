@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.3
+
+*2018-09-18*
+
+* Another fix for Zend service discovery
+
 ## 1.2.2
 
 *2018-09-17*
