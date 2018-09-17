@@ -1,10 +1,16 @@
 # Changelog
 
+## 1.2.2
+
+*2018-09-17*
+
+* Retrieve services from Zend without initiation
+
 ## 1.2.1
 
 *2018-09-17*
 
-* Suppress warnings in Zend Service retrieval 
+* Suppress warnings in Zend Service retrieval
 
 ## 1.2.0
 
