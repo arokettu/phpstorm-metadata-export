@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+*2018-09-17*
+
+* Suppress warnings in Zend Service retrieval 
+
 ## 1.2.0
 
 *2018-09-06*
