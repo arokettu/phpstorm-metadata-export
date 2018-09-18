@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.4
+
+*2018-09-18*
+
+* Fix incorrect handling of factories
+
 ## 1.2.3
 
 *2018-09-18*

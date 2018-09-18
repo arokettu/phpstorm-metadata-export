@@ -35,8 +35,8 @@ class ServiceManagerIterator implements ContainerIterator
                 $services[$class]   = $class;
             }
 
-            foreach ($this->factories as $factory) {
-                $services[$factory] = $factory;
+            foreach ($this->factories as $factoryKey => $factory) {
+                $services[$factoryKey] = $factoryKey;
             }
 
             ksort($services);
