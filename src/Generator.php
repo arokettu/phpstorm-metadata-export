@@ -24,17 +24,8 @@ abstract class Generator
             return new $iteratorClass($container);
         }, $containers);
 
-        $tmpAutoload = function ($className) {
-            throw new \RuntimeException('Metadata Export fallback autoloader: Cannot load class ' . $className);
-        };
-
-        try {
-            spl_autoload_register($tmpAutoload); // so non existing class is not a fatal error but an exception
-            $metadata = new Metadata(...$iterators);
-            return $metadata->render($options['overrides']);
-        } finally {
-            spl_autoload_unregister($tmpAutoload);
-        }
+        $metadata = new Metadata(...$iterators);
+        return $metadata->render($options['overrides']);
     }
 
     /**
