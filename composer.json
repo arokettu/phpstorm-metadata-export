@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "SandFox\\PhpStorm\\Metadata\\": "src"
-        }
+        },
+        "classmap": [
+            "legacy.php"
+        ]
     },
     "require": {
         "php": ">= 7.0"
