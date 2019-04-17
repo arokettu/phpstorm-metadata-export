@@ -9,7 +9,7 @@ use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
 use SandFox\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
 use Zend\ServiceManager\ServiceManager;
 
-abstract class Generator
+final class Generator
 {
     public static function get(array $containers, array $options = [])
     {
