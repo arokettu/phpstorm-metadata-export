@@ -48,7 +48,7 @@ Don't forget to gitignore your `.phpstorm.meta.php` directory.
 ```php
 <?php
 
-use SandFoxMe\PhpStorm\Metadata\Generator;
+use SandFox\PhpStorm\Metadata\Generator;
 
 $container = new Container();
 
@@ -67,13 +67,13 @@ Generator::store(
 
 ### Slim
 
-Add middleware class `SandFoxMe\PhpStorm\Metadata\Integration\Slim\ContainerExportMiddleware` to your Slim app.
+Add middleware class `SandFox\PhpStorm\Metadata\Integration\Slim\ContainerExportMiddleware` to your Slim app.
 
 ```php
 <?php
 
 use Slim\App;
-use SandFoxMe\PhpStorm\Metadata\Integration\Slim\ContainerExportMiddleware;
+use SandFox\PhpStorm\Metadata\Integration\Slim\ContainerExportMiddleware;
 
 $app = new App();
 
@@ -88,13 +88,13 @@ $app->add(new ContainerExportMiddleware($app->getContainer(), [
 
 ### Silex
 
-Add service provider class `SandFoxMe\PhpStorm\Metadata\Integration\Silex\ContainerExportProvider` to your Silex app.
+Add service provider class `SandFox\PhpStorm\Metadata\Integration\Silex\ContainerExportProvider` to your Silex app.
 
 ```php
 <?php
 
 use Silex\Application;
-use SandFoxMe\PhpStorm\Metadata\Integration\Silex\ContainerExportProvider;
+use SandFox\PhpStorm\Metadata\Integration\Silex\ContainerExportProvider;
 
 $app = new Application();
 
@@ -110,12 +110,12 @@ $app->register(new ContainerExportProvider(), [
 ### Psr15
 
 Version 1.1 adds Psr15 compliant middleware implementation. It generally uses the same approach as Slim Middleware.
-The classname is `SandFoxMe\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware`.
+The classname is `SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware`.
 
 ```php
 <?php
 
-use SandFoxMe\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware;
+use SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware;
 
 $middleware = new ContainerExportMiddleware($container);
 

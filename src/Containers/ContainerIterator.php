@@ -1,6 +1,6 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Containers;
+namespace SandFox\PhpStorm\Metadata\Containers;
 
 interface ContainerIterator extends \IteratorAggregate
 {

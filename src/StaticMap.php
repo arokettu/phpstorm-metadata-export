@@ -1,6 +1,6 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata;
+namespace SandFox\PhpStorm\Metadata;
 
 class StaticMap extends \ArrayObject
 {

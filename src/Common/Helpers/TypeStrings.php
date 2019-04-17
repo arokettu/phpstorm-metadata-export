@@ -1,6 +1,6 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Common\Helpers;
+namespace SandFox\PhpStorm\Metadata\Common\Helpers;
 
 abstract class TypeStrings
 {

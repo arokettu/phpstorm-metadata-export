@@ -1,9 +1,9 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Containers\Zend;
+namespace SandFox\PhpStorm\Metadata\Containers\Zend;
 
-use SandFoxMe\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFoxMe\PhpStorm\Metadata\Containers\ContainerIterator;
+use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use Zend\ServiceManager\ServiceManager;
 
 class ServiceManagerIterator implements ContainerIterator

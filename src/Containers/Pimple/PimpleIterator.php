@@ -1,10 +1,10 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Containers\Pimple;
+namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
 
 use Pimple\Container;
-use SandFoxMe\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFoxMe\PhpStorm\Metadata\Containers\ContainerIterator;
+use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
 class PimpleIterator implements ContainerIterator
 {

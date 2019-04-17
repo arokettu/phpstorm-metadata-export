@@ -1,12 +1,12 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Integration\Psr15;
+namespace SandFox\PhpStorm\Metadata\Integration\Psr15;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use SandFoxMe\PhpStorm\Metadata\Generator;
+use SandFox\PhpStorm\Metadata\Generator;
 
 class ContainerExportMiddleware implements MiddlewareInterface
 {

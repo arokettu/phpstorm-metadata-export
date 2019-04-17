@@ -1,12 +1,12 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata;
+namespace SandFox\PhpStorm\Metadata;
 
 use Pimple\Container as Pimple;
-use SandFoxMe\PhpStorm\Metadata\Common\Metadata;
-use SandFoxMe\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
-use SandFoxMe\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
-use SandFoxMe\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
+use SandFox\PhpStorm\Metadata\Common\Metadata;
+use SandFox\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
+use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
+use SandFox\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
 use Zend\ServiceManager\ServiceManager;
 
 abstract class Generator

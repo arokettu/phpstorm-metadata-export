@@ -1,12 +1,12 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Common;
+namespace SandFox\PhpStorm\Metadata\Common;
 
-use SandFoxMe\PhpStorm\Metadata\Containers\ContainerIterator;
+use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
 /**
  * Class Metadata
- * @package SandFoxMe\PhpStorm\Metadata\Common
+ * @package SandFox\PhpStorm\Metadata\Common
  * @see https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata
  */
 class Metadata

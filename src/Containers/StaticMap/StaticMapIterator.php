@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SandFoxMe\PhpStorm\Metadata\Containers\StaticMap;
+namespace SandFox\PhpStorm\Metadata\Containers\StaticMap;
 
-use SandFoxMe\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFoxMe\PhpStorm\Metadata\Containers\ContainerIterator;
-use SandFoxMe\PhpStorm\Metadata\StaticMap;
+use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
+use SandFox\PhpStorm\Metadata\StaticMap;
 
 class StaticMapIterator implements ContainerIterator
 {

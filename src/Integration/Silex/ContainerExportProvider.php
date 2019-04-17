@@ -1,10 +1,10 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Integration\Silex;
+namespace SandFox\PhpStorm\Metadata\Integration\Silex;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use SandFoxMe\PhpStorm\Metadata\Generator;
+use SandFox\PhpStorm\Metadata\Generator;
 use Silex\Api\BootableProviderInterface;
 use Silex\Application;
 

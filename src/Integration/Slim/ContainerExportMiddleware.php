@@ -1,10 +1,10 @@
 <?php
 
-namespace SandFoxMe\PhpStorm\Metadata\Integration\Slim;
+namespace SandFox\PhpStorm\Metadata\Integration\Slim;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use SandFoxMe\PhpStorm\Metadata\Generator;
+use SandFox\PhpStorm\Metadata\Generator;
 
 class ContainerExportMiddleware
 {
