@@ -2,7 +2,7 @@
 
 namespace SandFox\PhpStorm\Metadata\Common\Helpers;
 
-abstract class TypeStrings
+final class TypeStrings
 {
     const TYPE_NAMES = [
         'string',
