@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1
+
+*2019-04-17*
+
+Avoid crash when Slim or Silex are not installed while using legacy class names
+
 ## 1.3.0
 
 *2019-04-17*
