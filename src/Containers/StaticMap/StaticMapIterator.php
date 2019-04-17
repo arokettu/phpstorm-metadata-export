@@ -7,6 +7,9 @@ use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use SandFox\PhpStorm\Metadata\StaticMap;
 
+/**
+ * @internal
+ */
 class StaticMapIterator implements ContainerIterator
 {
     private $map;

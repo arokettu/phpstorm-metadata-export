@@ -6,6 +6,9 @@ use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use Zend\ServiceManager\ServiceManager;
 
+/**
+ * @internal
+ */
 class ServiceManagerIterator implements ContainerIterator
 {
     const DEFAULT_OPTIONS = [

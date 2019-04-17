@@ -7,6 +7,7 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 /**
  * Class Metadata
  * @package SandFox\PhpStorm\Metadata\Common
+ * @internal
  * @see https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata
  */
 class Metadata

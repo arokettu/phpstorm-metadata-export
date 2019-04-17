@@ -6,6 +6,9 @@ use Pimple\Container;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
+/**
+ * @internal
+ */
 class PimpleIterator implements ContainerIterator
 {
     const DEFAULT_OPTIONS = [
