@@ -2,6 +2,7 @@
     "name": "sandfoxme/phpstorm-metadata-export",
     "description": "Export PhpStorm Advanced Metadata from DI containers",
     "keywords": ["dependency injection", "phpstorm", "pimple", "slim", "silex", "code completion"],
+    "homepage": "https://sandfox.dev/phpstorm-metadata-export.html",
     "type": "library",
     "license": "MIT",
     "authors": [
