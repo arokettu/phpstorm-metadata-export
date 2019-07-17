@@ -24,6 +24,7 @@ composer require sandfoxme/phpstorm-metadata-export --dev
 Supported containers:
 
 * Pimple
+* PHP-DI
 * Zend ServiceManager (experimental)
 
 Integration middlewares for:

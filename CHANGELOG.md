@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+*2019-07-18*
+
+Add support for PHP-DI
+
 ## 1.3.1
 
 *2019-04-17*
