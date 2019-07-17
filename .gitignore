@@ -2,3 +2,4 @@
 /.phpstorm.meta.php
 /vendor
 /composer.lock
+/tmp*
