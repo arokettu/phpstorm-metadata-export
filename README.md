@@ -34,7 +34,7 @@ Integration middlewares for:
 
 ## Documentation
 
-Read full documentation at <https://sandfox.dev/phpstorm-metadata-export.html>
+Read full documentation at <https://sandfox.dev/php/phpstorm-metadata-export.html>
 
 ## License
 
