@@ -24,6 +24,7 @@
         "php": ">= 7.0"
     },
     "require-dev": {
+        "php-di/php-di": "^6.0",
         "pimple/pimple": "^3.0",
         "psr/http-server-middleware": "^1.0",
         "psy/psysh": "*",
