@@ -1,7 +1,7 @@
 PhpStorm Metadata Export
 ########################
 
-|Packagist| |GitHub| |Gitlab| |Bitbucket|
+|Packagist| |GitHub| |Gitlab| |Bitbucket| |Gitea|
 
 Export `PhpStorm Advanced Metadata`_ from DI containers to enable code completion.
 
@@ -25,6 +25,11 @@ Pimple
 ------
 
 The library has full support for the Pimple DI version 3.*
+
+PHP-DI
+------
+
+The library has full support for the PHP-DI version 6.*
 
 Zend ServiceManager
 -------------------
@@ -154,3 +159,5 @@ See LICENSE.md
    :target: https://gitlab.com/sandfox/phpstorm-metadata-export
 .. |Bitbucket|  image:: https://img.shields.io/badge/Bitbucket-phpstorm--metadata--export-informational.svg?logo=bitbucket
    :target: https://bitbucket.org/sandfox/phpstorm-metadata-export
+.. |Gitea|      image:: https://img.shields.io/badge/Gitea-phpstorm--metadata--export-informational.svg
+   :target: https://git.sandfox.dev/sandfox/phpstorm-metadata-export
