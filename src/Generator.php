@@ -2,8 +2,10 @@
 
 namespace SandFox\PhpStorm\Metadata;
 
+use DI\Container as DI;
 use Pimple\Container as Pimple;
 use SandFox\PhpStorm\Metadata\Common\Metadata;
+use SandFox\PhpStorm\Metadata\Containers\DI\DIIterator;
 use SandFox\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
 use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
 use SandFox\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
@@ -78,6 +80,10 @@ final class Generator
 
         if ($container instanceof ServiceManager) {
             return ServiceManagerIterator::class;
+        }
+
+        if ($container instanceof DI) {
+            return DIIterator::class;
         }
 
         throw new \RuntimeException('Unsupported container');
