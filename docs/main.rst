@@ -153,11 +153,11 @@ See LICENSE.md
 
 .. |Packagist|  image:: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg
    :target: https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
-.. |GitHub|     image:: https://img.shields.io/badge/GitHub-phpstorm--metadata--export-informational.svg?logo=github
+.. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?logo=github
    :target: https://github.com/sandfoxme/phpstorm-metadata-export
-.. |Gitlab|     image:: https://img.shields.io/badge/Gitlab-phpstorm--metadata--export-informational.svg?logo=gitlab
+.. |Gitlab|     image:: https://img.shields.io/badge/get%20on-Gitlab-informational.svg?logo=gitlab
    :target: https://gitlab.com/sandfox/phpstorm-metadata-export
-.. |Bitbucket|  image:: https://img.shields.io/badge/Bitbucket-phpstorm--metadata--export-informational.svg?logo=bitbucket
+.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
    :target: https://bitbucket.org/sandfox/phpstorm-metadata-export
-.. |Gitea|      image:: https://img.shields.io/badge/Gitea-phpstorm--metadata--export-informational.svg
+.. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg
    :target: https://git.sandfox.dev/sandfox/phpstorm-metadata-export
