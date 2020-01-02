@@ -1,16 +1,22 @@
 # Changelog
 
+## 1.5.0
+
+*2020-01-02*
+
+* Add explicit support for Laminas
+
 ## 1.4.0
 
 *2019-07-18*
 
-Add support for PHP-DI
+* Add support for PHP-DI
 
 ## 1.3.1
 
 *2019-04-17*
 
-Avoid crash when Slim or Silex are not installed while using legacy class names
+* Avoid crash when Slim or Silex are not installed while using legacy class names
 
 ## 1.3.0
 
@@ -71,4 +77,4 @@ Avoid crash when Slim or Silex are not installed while using legacy class names
 
 *2018-02-22*
 
-Initial release
+* Initial release
