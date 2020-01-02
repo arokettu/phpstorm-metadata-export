@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+    @see https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
+-->
+<ruleset name="Custom Standard" namespace="MyProject\CS\Standard">
+    <rule ref="PSR12">
+        <!-- PHP 7.1+ -->
+        <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
+    </rule>
+    <rule ref="PHPCompatibility"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
+        <properties>
+            <property name="caseSensitive">true</property>
+        </properties>
+    </rule>
+    <config name="testVersion" value="7.0-"/>
+    <file>src</file>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <ini name="memory_limit" value="2G"/>
+</ruleset>

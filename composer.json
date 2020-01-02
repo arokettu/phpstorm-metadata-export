@@ -24,13 +24,17 @@
         "php": ">= 7.0"
     },
     "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
         "laminas/laminas-servicemanager": "^3.0",
         "php-di/php-di": "^6.0",
+        "phpcompatibility/php-compatibility": "*",
         "pimple/pimple": "^3.0",
         "psr/http-server-middleware": "^1.0",
         "psy/psysh": "*",
         "silex/silex": "^2.0",
+        "slevomat/coding-standard": "*",
         "slim/slim": "^3.0",
-        "sllh/composer-versions-check": "^2.0"
+        "sllh/composer-versions-check": "*",
+        "squizlabs/php_codesniffer": "*"
     }
 }
