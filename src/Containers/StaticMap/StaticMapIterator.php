@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SandFox\PhpStorm\Metadata\Containers\StaticMap;
 
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;

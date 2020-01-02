@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 
 namespace SandFox\PhpStorm\Metadata\Containers\Zend;
 

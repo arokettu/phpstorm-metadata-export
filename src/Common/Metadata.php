@@ -36,7 +36,7 @@ class Metadata
         foreach ($map as $key => $value) {
             $key = str_replace('\\', '\\\\', $key);
             $key = str_replace('\'', '\\\'', $key);
-            $mapStrings []= "'{$key}' => {$value},";
+            $mapStrings[] = "'{$key}' => {$value},";
         }
 
         $mapString = implode("\n        ", $mapStrings);
