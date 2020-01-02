@@ -4,7 +4,14 @@ namespace SandFox\PhpStorm\Metadata\Containers\Zend;
 
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
-use Zend\ServiceManager\ServiceManager;
+
+// Laminas replaces Zend so add an alias for the installed one
+
+if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
+    class_alias(\Laminas\ServiceManager\ServiceManager::class, ServiceManager::class);
+} elseif (class_exists(\Zend\ServiceManager\ServiceManager::class)) {
+    class_alias(\Zend\ServiceManager\ServiceManager::class, ServiceManager::class);
+}
 
 /**
  * @internal
@@ -15,6 +22,7 @@ class ServiceManagerIterator implements ContainerIterator
         'overrides' => [
             '\\Psr\\Container\\ContainerInterface::get(0)',
             '\\Zend\\ServiceManager\\ServiceLocatorInterface::get(0)',
+            '\\Laminas\\ServiceManager\\ServiceLocatorInterface::get(0)',
         ],
     ];
 
