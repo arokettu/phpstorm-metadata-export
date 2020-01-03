@@ -33,7 +33,7 @@ Integration middlewares for:
 
 * [Slim]
 * [Silex]
-* [PSR-15] (Zend Expressive, Mezzo, Slim 4, ...)
+* [PSR-15] (Zend Expressive, Mezzio, Slim 4, ...)
 
 [Pimple]:   https://pimple.symfony.com/
 [PHP-DI]:   http://php-di.org/
