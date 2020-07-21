@@ -1,7 +1,7 @@
 PhpStorm Metadata Export
 ########################
 
-|Packagist| |GitHub| |Gitlab| |Bitbucket| |Gitea|
+|Packagist| |GitLab| |GitHub| |Bitbucket| |Gitea|
 
 Export `PhpStorm Advanced Metadata`_ from DI containers to enable code completion.
 
@@ -156,8 +156,8 @@ See LICENSE.md
 .. |Packagist|  image:: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg
    :target: https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
 .. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?logo=github
-   :target: https://github.com/sandfoxme/phpstorm-metadata-export
-.. |Gitlab|     image:: https://img.shields.io/badge/get%20on-Gitlab-informational.svg?logo=gitlab
+   :target: https://github.com/arokettu/phpstorm-metadata-export
+.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?logo=gitlab
    :target: https://gitlab.com/sandfox/phpstorm-metadata-export
 .. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
    :target: https://bitbucket.org/sandfox/phpstorm-metadata-export
