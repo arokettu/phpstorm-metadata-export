@@ -22,18 +22,13 @@ final class TypeStrings
     {
         if (is_object($instance)) {
             $class = get_class($instance);
+            // if not anonymous class
             if (strpos($class, "\0") === false) {
-                $typeString = "\\{$class}::class";
-            } else { // handle anonymous class
-                $typeString = 'object::class';
+                return "\\{$class}::class";
             }
-        } elseif (is_array($instance)) {
-            $typeString = "\\ArrayObject::class"; // array::class shows error, try to approximate
-        } else {
-            $typeString = gettype($instance) . '::class';
         }
 
-        return $typeString;
+        return "'" . gettype($instance) . "'";
     }
 
     public static function getTypeStringByTypeName(string $typeName): string
