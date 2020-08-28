@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0
+
+*2020-08-28*
+
+* Simplify handling of scalars
+* Require PHP 7.1
+
 ## 1.5.0
 
 *2020-01-02*
