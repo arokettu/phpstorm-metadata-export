@@ -11,14 +11,17 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
  */
 class PimpleIterator implements ContainerIterator
 {
-    const DEFAULT_OPTIONS = [
-        'overrides' => [
-            '\\Psr\\Container\\ContainerInterface::get(0)',
-            'new \\Pimple\\Container',
-        ],
-    ];
-
     private $pimple;
+
+    public static function getDefaultOptions(): array
+    {
+        return [
+            'overrides' => [
+                '\\Psr\\Container\\ContainerInterface::get(0)',
+                'new \\Pimple\\Container',
+            ],
+        ];
+    }
 
     public function __construct(Container $pimple)
     {

@@ -66,7 +66,7 @@ final class Generator
 
         $iteratorClass = self::getIteratorClass($container);
 
-        return array_merge($iteratorClass::DEFAULT_OPTIONS, $options);
+        return array_merge($iteratorClass::getDefaultOptions(), $options);
     }
 
     private static function getIteratorClass($container): string

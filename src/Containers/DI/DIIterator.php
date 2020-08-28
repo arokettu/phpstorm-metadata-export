@@ -10,14 +10,17 @@ use Traversable;
 
 class DIIterator implements ContainerIterator
 {
-    const DEFAULT_OPTIONS = [
-        'overrides' => [
-            '\\Psr\\Container\\ContainerInterface::get(0)',
-            '\\DI\\Container',
-        ],
-    ];
-
     private $di;
+
+    public static function getDefaultOptions(): array
+    {
+        return [
+            'overrides' => [
+                '\\Psr\\Container\\ContainerInterface::get(0)',
+                '\\DI\\Container',
+            ],
+        ];
+    }
 
     public function __construct(Container $di)
     {

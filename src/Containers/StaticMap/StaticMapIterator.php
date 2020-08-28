@@ -13,6 +13,11 @@ class StaticMapIterator implements ContainerIterator
 {
     private $map;
 
+    public static function getDefaultOptions(): array
+    {
+        return [];
+    }
+
     public function __construct(StaticMap $map)
     {
         $this->map = $map;

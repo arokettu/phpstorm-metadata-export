@@ -7,4 +7,8 @@ namespace SandFox\PhpStorm\Metadata\Containers;
  */
 interface ContainerIterator extends \IteratorAggregate
 {
+    /**
+     * @internal
+     */
+    public static function getDefaultOptions(): array;
 }

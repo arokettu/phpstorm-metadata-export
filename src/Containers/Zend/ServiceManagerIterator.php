@@ -18,15 +18,18 @@ if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
  */
 class ServiceManagerIterator implements ContainerIterator
 {
-    const DEFAULT_OPTIONS = [
-        'overrides' => [
-            '\\Psr\\Container\\ContainerInterface::get(0)',
-            '\\Zend\\ServiceManager\\ServiceLocatorInterface::get(0)',
-            '\\Laminas\\ServiceManager\\ServiceLocatorInterface::get(0)',
-        ],
-    ];
-
     private $serviceManager;
+
+    public static function getDefaultOptions(): array
+    {
+        return [
+            'overrides' => [
+                '\\Psr\\Container\\ContainerInterface::get(0)',
+                '\\Zend\\ServiceManager\\ServiceLocatorInterface::get(0)',
+                '\\Laminas\\ServiceManager\\ServiceLocatorInterface::get(0)',
+            ],
+        ];
+    }
 
     public function __construct(ServiceManager $serviceManager)
     {
