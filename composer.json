@@ -32,7 +32,6 @@
         "psr/http-server-middleware": "^1.0",
         "psy/psysh": "*",
         "silex/silex": "^2.0",
-        "slevomat/coding-standard": "*",
         "slim/slim": "^3.0",
         "sllh/composer-versions-check": "*",
         "squizlabs/php_codesniffer": "*"

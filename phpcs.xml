@@ -8,11 +8,6 @@
         <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
     </rule>
     <rule ref="PHPCompatibility"/>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
-        <properties>
-            <property name="caseSensitive">true</property>
-        </properties>
-    </rule>
     <config name="testVersion" value="7.0-"/>
     <file>src</file>
     <exclude-pattern>*/vendor/*</exclude-pattern>
