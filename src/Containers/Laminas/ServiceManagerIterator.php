@@ -43,8 +43,11 @@ class ServiceManagerIterator implements ContainerIterator
     {
         $servicesFunc = function () {
             $services = [];
+            $aliases = isset($this->resolvedAliases) ?
+                $this->resolvedAliases :    // 3.5 and earlier
+                $this->aliases;             // in 3.6 aliases are pre-resolved
 
-            foreach ($this->resolvedAliases as $key => $class) {
+            foreach ($aliases as $key => $class) {
                 $services[$key]     = $class;
                 $services[$class]   = $class;
             }
