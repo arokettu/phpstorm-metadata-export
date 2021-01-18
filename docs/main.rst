@@ -76,8 +76,34 @@ Using Generator directly
         [$container]
     );
 
-Slim
-----
+PSR-15
+------
+
+Version 1.1 adds Psr15 compliant middleware implementation like Slim 4 or Mezzio.
+It generally uses the same approach as the earlier Slim Middleware.
+The classname is ``SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware``.
+
+.. code-block:: php
+
+    <?php
+
+    use SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware;
+
+    $middleware = new ContainerExportMiddleware($container);
+
+    // You can also override metadata filename like this
+    $middleware = new ContainerExportMiddleware($container, [
+        // it is a good idea to use full path here
+        'filename' => '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
+    ]);
+
+    // Register middleware the way your compliant framework allows it
+    $myPsr15CompliantApp->registerMiddleware($middleware);
+
+Slim 3
+------
+
+.. note:: Slim 4 can also use this middleware but PSR-15 is preferable
 
 Add middleware class ``SandFox\PhpStorm\Metadata\Integration\Slim\ContainerExportMiddleware`` to your Slim app.
 
@@ -101,6 +127,10 @@ Add middleware class ``SandFox\PhpStorm\Metadata\Integration\Slim\ContainerExpor
 Silex
 -----
 
+.. warning::
+   This class is deprecated since 1.7.0 and will be removed in 2.0.
+   You should use neither this middleware nor Silex itself.
+
 Add service provider class ``SandFox\PhpStorm\Metadata\Integration\Silex\ContainerExportProvider`` to your Silex app.
 
 .. code-block:: php
@@ -120,29 +150,6 @@ Add service provider class ``SandFox\PhpStorm\Metadata\Integration\Silex\Contain
         'phpstorm.metadata.filename' => '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
     ]);
 
-Psr15
------
-
-Version 1.1 adds Psr15 compliant middleware implementation. It generally uses the same approach as Slim Middleware.
-The classname is ``SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware``.
-
-.. code-block:: php
-
-    <?php
-
-    use SandFox\PhpStorm\Metadata\Integration\Psr15\ContainerExportMiddleware;
-
-    $middleware = new ContainerExportMiddleware($container);
-
-    // You can also override metadata filename like this
-    $middleware = new ContainerExportMiddleware($container, [
-        // it is a good idea to use full path here
-        'filename' => '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
-    ]);
-
-    // Register middleware the way your compliant framework allows it
-    $myPsr15CompliantApp->registerMiddleware($middleware);
-
 License
 =======
 
@@ -153,13 +160,13 @@ See LICENSE.md
 .. _Pimple Container Dumper:    https://github.com/Sorien/silex-pimple-dumper
 .. _MIT License:                https://opensource.org/licenses/MIT
 
-.. |Packagist|  image:: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg
+.. |Packagist|  image:: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square&
    :target:     https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
-.. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?logo=github
+.. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?style=flat-square&logo=github
    :target:     https://github.com/arokettu/phpstorm-metadata-export
-.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?logo=gitlab
+.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?style=flat-square&logo=gitlab
    :target:     https://gitlab.com/sandfox/phpstorm-metadata-export
-.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
+.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?style=flat-square&logo=bitbucket
    :target:     https://bitbucket.org/sandfox/phpstorm-metadata-export
-.. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg
+.. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg?style=flat-square&logo=gitea
    :target:     https://sandfox.org/sandfox/phpstorm-metadata-export

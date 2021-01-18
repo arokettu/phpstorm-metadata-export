@@ -1,8 +1,8 @@
 # PhpStorm Metadata Export
 
-[![Packagist](https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg)](https://packagist.org/packages/sandfoxme/phpstorm-metadata-export)
-[![license](https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg)](https://opensource.org/licenses/MIT)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg)](https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export)
+[![Packagist](https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://packagist.org/packages/sandfoxme/phpstorm-metadata-export)
+[![license](https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export)
 
 Export [PhpStorm Advanced Metadata] from DI containers to enable code completion.
 
@@ -27,19 +27,19 @@ Supported containers:
 
 * [Pimple]
 * [PHP-DI]
-* [Laminas ServiceManager] / [Zend ServiceManager] (experimental)
+* [Laminas ServiceManager] / [Zend ServiceManager] (unstable)
 
 Integration middlewares for:
 
-* [Slim]
-* [Silex]
-* [PSR-15] (Zend Expressive, Mezzio, Slim 4, ...)
+* [PSR-15] (Mezzio, Slim 4, ...)
+* [Slim 3]
+* [Silex] (deprecated)
 
 [Pimple]:   https://pimple.symfony.com/
 [PHP-DI]:   http://php-di.org/
 [Laminas ServiceManager]:   https://docs.laminas.dev/laminas-servicemanager/
 [Zend ServiceManager]:      https://docs.zendframework.com/zend-servicemanager/
-[Slim]:     https://www.slimframework.com/
+[Slim 3]:   https://www.slimframework.com/
 [Silex]:    https://silex.symfony.com/
 [PSR-15]:   https://www.php-fig.org/psr/psr-15/
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.0
+
+*Jan 18, 2021*
+
+* Fix compatibility with Laminas ServiceManager 3.6
+* Deprecate Silex support
+
 ## 1.6.0
 
 *Aug 28, 2020*
