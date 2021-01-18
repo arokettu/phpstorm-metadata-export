@@ -1,6 +1,6 @@
 <?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 
-namespace SandFox\PhpStorm\Metadata\Containers\Zend;
+namespace SandFox\PhpStorm\Metadata\Containers\Laminas;
 
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;

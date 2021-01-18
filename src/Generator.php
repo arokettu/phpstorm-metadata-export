@@ -7,9 +7,9 @@ use Laminas\ServiceManager\ServiceManager as LaminasServiceManager;
 use Pimple\Container as Pimple;
 use SandFox\PhpStorm\Metadata\Common\Metadata;
 use SandFox\PhpStorm\Metadata\Containers\DI\DIIterator;
+use SandFox\PhpStorm\Metadata\Containers\Laminas\ServiceManagerIterator;
 use SandFox\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
 use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
-use SandFox\PhpStorm\Metadata\Containers\Zend\ServiceManagerIterator;
 use Zend\ServiceManager\ServiceManager as ZendServiceManager;
 
 final class Generator
