@@ -8,8 +8,20 @@ use SandFox\PhpStorm\Metadata\Generator;
 use Silex\Api\BootableProviderInterface;
 use Silex\Application;
 
+/**
+ * @deprecated Since Silex itself is deprecated, deprecate the class too
+ */
 class ContainerExportProvider implements ServiceProviderInterface, BootableProviderInterface
 {
+    public function __construct()
+    {
+        trigger_deprecation(
+            'sandfoxme/phpstorm-metadata-export',
+            '1.7.0',
+            'Silex itself is deprecated for a long time now'
+        );
+    }
+
     public function register(Container $pimple)
     {
         // try to find root path of the project (parent of vendor)

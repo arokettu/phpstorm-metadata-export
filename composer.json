@@ -21,7 +21,8 @@
         }
     },
     "require": {
-        "php": "^7.1 || ^8.0"
+        "php": "^7.1 || ^8.0",
+        "symfony/deprecation-contracts": "^2.2"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "*",
@@ -33,7 +34,6 @@
         "psy/psysh": "*",
         "silex/silex": "^2.0",
         "slim/slim": "^3.0",
-        "sllh/composer-versions-check": "*",
         "squizlabs/php_codesniffer": "*"
     }
 }
