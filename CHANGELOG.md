@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.7.1
+
+*Sep 29, 2021*
+
+* Fixed semantic version inconsistency introduced in 1.6: roll back to PHP 7.0
+
 ## 1.7.0
 
 *Jan 18, 2021*
