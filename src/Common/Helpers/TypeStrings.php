@@ -14,7 +14,7 @@ final class TypeStrings
         'boolean',
         'object',
         'resource',
-        'NULL',
+        'null',
         // no array here because it needs special handling
     ];
 
