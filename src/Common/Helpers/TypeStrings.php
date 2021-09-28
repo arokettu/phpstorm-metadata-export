@@ -7,7 +7,7 @@ namespace SandFox\PhpStorm\Metadata\Common\Helpers;
  */
 final class TypeStrings
 {
-    private const TYPE_NAMES = [
+    const TYPE_NAMES = [
         'string',
         'integer',
         'double',

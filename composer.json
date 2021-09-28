@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "php": "^7.1 || ^8.0",
+        "php": "^7.0 || ^8.0",
         "symfony/deprecation-contracts": "^2.1"
     },
     "require-dev": {
