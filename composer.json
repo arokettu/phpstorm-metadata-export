@@ -16,8 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SandFox\\PhpStorm\\Metadata\\": "src",
-            "SandFoxMe\\PhpStorm\\Metadata\\": "legacy"
+            "SandFox\\PhpStorm\\Metadata\\": "src"
         }
     },
     "require": {
