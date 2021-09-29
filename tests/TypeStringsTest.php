@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * phpcs:disable Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore
+ */
+
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Tests;
 
 use PHPUnit\Framework\TestCase;

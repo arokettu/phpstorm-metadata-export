@@ -1,15 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
 
-use Pimple\Container;
 use Pimple\Psr11\ServiceLocator;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
 class ServiceLocatorIterator implements ContainerIterator
 {
-    /** @var Container */
+    /** @var \Pimple\Container */
     private $pimple;
     /** @var array */
     private $aliases;
