@@ -34,7 +34,6 @@ PSR-15
 ======
 
 The library provides a middleware implementation for PSR-15 compliant framework like Slim 4 or Mezzio.
-It generally uses the same approach as the earlier Slim Middleware.
 The classname is ``SandFox\PhpStorm\Metadata\Integration\ContainerExportMiddleware``.
 
 .. code-block:: php
@@ -51,7 +50,7 @@ The classname is ``SandFox\PhpStorm\Metadata\Integration\ContainerExportMiddlewa
         'filename' => '/path/to/project/.phpstorm.meta.php/my_export_file.meta.php',
     ]);
 
-    // Register middleware the way your compliant framework allows it
+    // Register middleware the way your framework allows it
     $myPsr15CompliantApp->registerMiddleware($middleware);
 
 Slim 3
