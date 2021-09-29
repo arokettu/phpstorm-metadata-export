@@ -23,7 +23,7 @@ class PimpleTest extends TestCase
             return 'path';
         };
         $pimple['int'] = 123;
-        $pimple['errored'] = function () {
+        $pimple['errored'] = function (): void {
             throw new \RuntimeException('Unable to init');
         };
 

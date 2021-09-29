@@ -44,20 +44,19 @@ final class ServiceManagerIterator implements ContainerIterator
     public function getIterator(): \Traversable
     {
         $servicesFunc = function () {
-            $aliases = $this->resolvedAliases ??    // 3.5 and earlier
+            // service instances
+            yield from array_keys($this->services);
+
+            // service factories
+            yield from array_keys($this->factories);
+
+            // aliases
+            yield from $this->resolvedAliases ??    // 3.5 and earlier
                 $this->aliases;                     // in 3.6 aliases are pre-resolved
-
-            $services = array_merge(
-                array_keys($aliases),
-                array_keys($this->factories)
-            );
-
-            sort($services);
-
-            return $services;
         };
 
-        $services = $servicesFunc->call($this->serviceManager);
+        $services = iterator_to_array($servicesFunc->call($this->serviceManager), false);
+        sort($services);
 
         foreach ($services as $key) {
             try {
