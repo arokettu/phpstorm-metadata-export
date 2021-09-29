@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Integration;
 
 use Psr\Http\Message\ResponseInterface;
@@ -10,10 +12,16 @@ use SandFox\PhpStorm\Metadata\Generator;
 
 final class ContainerExportMiddleware implements MiddlewareInterface
 {
+    /** @var object */
     private $container;
+    /** @var array */
     private $options;
 
-    public function __construct($container, $options = [])
+    /**
+     * @param object $container
+     * @param array $options
+     */
+    public function __construct($container, array $options = [])
     {
         $this->container = $container;
         $this->options   = $options;
@@ -21,10 +29,6 @@ final class ContainerExportMiddleware implements MiddlewareInterface
 
     /**
      * PSR-15 Middleware
-     *
-     * @param ServerRequestInterface $request
-     * @param RequestHandlerInterface $handler
-     * @return ResponseInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
@@ -35,6 +39,9 @@ final class ContainerExportMiddleware implements MiddlewareInterface
         }
     }
 
+    /**
+     * Slim-style Middleware
+     */
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface $response,
@@ -57,7 +64,7 @@ final class ContainerExportMiddleware implements MiddlewareInterface
         try {
             Generator::store($filename, [$this->container], $this->options['options'] ?? []);
         } catch (\Throwable $e) {
-            file_put_contents($filename, "Exception: " . get_class($e) . "\n" . $e->getMessage());
+            file_put_contents($filename, "Exception: " . \get_class($e) . "\n" . $e->getMessage());
         }
     }
 }

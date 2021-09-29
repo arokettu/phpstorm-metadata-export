@@ -61,7 +61,7 @@ final class Generator
     }
 
     /**
-     * @param mixed $container
+     * @param object $container
      * @param array $options
      * @return array
      */
@@ -77,7 +77,7 @@ final class Generator
     }
 
     /**
-     * @param mixed $container
+     * @param object $container
      * @return string
      */
     private static function getIteratorClass($container): string
@@ -98,6 +98,6 @@ final class Generator
             return DIIterator::class;
         }
 
-        throw new \RuntimeException('Unsupported container');
+        throw new \InvalidArgumentException('Unsupported container');
     }
 }
