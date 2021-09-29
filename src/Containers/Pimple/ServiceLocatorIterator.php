@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
 
 use Pimple\Psr11\ServiceLocator;
+use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
@@ -35,8 +36,7 @@ final class ServiceLocatorIterator implements ContainerIterator
             try {
                 yield $alias => TypeStrings::getTypeStringByInstance($this->pimple[$alias]);
             } catch (\Throwable $exception) {
-                yield $alias => TypeStrings::getTypeStringByInstance($exception) .
-                    ' /* Error message: "' . $exception->getMessage() . '" */';
+                yield $alias => ErrorFormatter::format($exception);
             }
         }
     }

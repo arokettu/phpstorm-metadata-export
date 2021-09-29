@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
 
 use Pimple\Container;
+use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
@@ -46,8 +47,7 @@ final class PimpleIterator implements ContainerIterator
             try {
                 yield $key => TypeStrings::getTypeStringByInstance($this->pimple[$key]);
             } catch (\Throwable $exception) {
-                yield $key => TypeStrings::getTypeStringByInstance($exception) .
-                    ' /* Error message: "' . $exception->getMessage() . '" */';
+                yield $key => ErrorFormatter::format($exception);
             }
         }
     }

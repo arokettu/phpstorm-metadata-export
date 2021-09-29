@@ -2,6 +2,7 @@
 
 namespace SandFox\PhpStorm\Metadata\Containers\Laminas;
 
+use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
@@ -18,9 +19,7 @@ if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
  */
 final class ServiceManagerIterator implements ContainerIterator
 {
-    /**
-     * @var ServiceManager
-     */
+    /** @var ServiceManager */
     private $serviceManager;
 
     public static function getDefaultOptions(): array
@@ -45,28 +44,27 @@ final class ServiceManagerIterator implements ContainerIterator
     public function getIterator(): \Traversable
     {
         $servicesFunc = function () {
-            $services = [];
             $aliases = $this->resolvedAliases ??    // 3.5 and earlier
                 $this->aliases;                     // in 3.6 aliases are pre-resolved
 
-            foreach ($aliases as $key => $class) {
-                $services[$key]     = $class;
-                $services[$class]   = $class;
-            }
+            $services = array_merge(
+                array_keys($aliases),
+                array_keys($this->factories)
+            );
 
-            foreach ($this->factories as $factoryKey => $factory) {
-                $services[$factoryKey] = $factoryKey;
-            }
-
-            ksort($services);
+            sort($services);
 
             return $services;
         };
 
-        $services = ($servicesFunc->bindTo($this->serviceManager, ServiceManager::class))();
+        $services = $servicesFunc->call($this->serviceManager);
 
-        foreach ($services as $key => $class) {
-            yield $key => TypeStrings::getTypeStringByTypeName($class);
+        foreach ($services as $key) {
+            try {
+                yield $key => TypeStrings::getTypeStringByInstance($this->serviceManager->get($key));
+            } catch (\Throwable $exception) {
+                yield $key => ErrorFormatter::format($exception);
+            }
         }
     }
 }

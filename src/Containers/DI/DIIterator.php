@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SandFox\PhpStorm\Metadata\Containers\DI;
 
 use DI\Container;
+use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use Throwable;
@@ -43,8 +44,7 @@ final class DIIterator implements ContainerIterator
             try {
                 yield $key => TypeStrings::getTypeStringByInstance($this->di->get($key));
             } catch (Throwable $exception) {
-                yield $key => TypeStrings::getTypeStringByInstance($exception) .
-                    ' /* Error message: "' . $exception->getMessage() . '" */';
+                yield $key => ErrorFormatter::format($exception);
             }
         }
     }
