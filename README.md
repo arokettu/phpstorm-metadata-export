@@ -1,8 +1,13 @@
 # PhpStorm Metadata Export
 
-[![Packagist](https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://packagist.org/packages/sandfoxme/phpstorm-metadata-export)
-[![license](https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg?style=flat-square)](https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export)
+[![Packagist]][Packagist Link]
+[![license]][MIT License]
+[![Code Climate]][Packagist Link]
+
+[Packagist]: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
+[license]: https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
+[Code Climate]: https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
+[Packagist Link]: https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
 
 Export [PhpStorm Advanced Metadata] from DI containers to enable code completion.
 
@@ -33,7 +38,6 @@ Integration middlewares for:
 
 * [PSR-15] (Mezzio, Slim 4, ...)
 * [Slim 3]
-* [Silex] (deprecated)
 
 [Pimple]:   https://pimple.symfony.com/
 [PHP-DI]:   http://php-di.org/
@@ -46,6 +50,8 @@ Integration middlewares for:
 ## Documentation
 
 Read full documentation at <https://sandfox.dev/php/phpstorm-metadata-export.html>
+
+Also on Read the Docs: <https://phpstorm-metadata-export.readthedocs.io/>
 
 ## License
 
