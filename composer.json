@@ -8,9 +8,16 @@
     "authors": [
         {
             "name": "Anton Smirnov",
-            "email": "sandfox@sandfox.me"
+            "email": "sandfox@sandfox.me",
+            "role": "developer",
+            "homepage": "https://sandfox.me/"
         }
     ],
+    "support": {
+        "issues": "https://gitlab.com/sandfox/phpstorm-metadata-export/-/issues",
+        "source": "https://gitlab.com/sandfox/phpstorm-metadata-export",
+        "docs": "https://phpstorm-metadata-export.readthedocs.io/"
+    },
     "config": {
         "sort-packages": true
     },
@@ -26,12 +33,11 @@
     "require-dev": {
         "laminas/laminas-servicemanager": "^3.0",
         "php-di/php-di": "^6.0",
-        "phpunit/phpunit": "> 7 < 10",
+        "phpunit/phpunit": ">= 7 < 10",
         "pimple/pimple": "^3.0",
         "psr/http-server-middleware": "^1.0",
         "psy/psysh": "*",
         "sandfox.dev/code-standard": "^7.1@dev",
-        "silex/silex": "^2.0",
         "slim/slim": "^3.0",
         "squizlabs/php_codesniffer": "*"
     }
