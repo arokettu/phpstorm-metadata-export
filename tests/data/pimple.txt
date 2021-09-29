@@ -6,12 +6,14 @@ namespace PHPSTORM_META {
     override(\Psr\Container\ContainerInterface::get(0), map([
         '' => '@',
         'ArrayObject' => \ArrayObject::class,
+        'errored' => \RuntimeException::class /* Error message: "Unable to init" */,
         'int' => 'int',
         'string' => 'string',
     ]));
     override(new \Pimple\Container, map([
         '' => '@',
         'ArrayObject' => \ArrayObject::class,
+        'errored' => \RuntimeException::class /* Error message: "Unable to init" */,
         'int' => 'int',
         'string' => 'string',
     ]));

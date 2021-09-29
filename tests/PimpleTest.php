@@ -23,6 +23,9 @@ class PimpleTest extends TestCase
             return 'path';
         };
         $pimple['int'] = 123;
+        $pimple['errored'] = function () {
+            throw new \RuntimeException('Unable to init');
+        };
 
         self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$pimple]));
 
