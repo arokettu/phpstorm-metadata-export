@@ -26,7 +26,7 @@
     "require-dev": {
         "laminas/laminas-servicemanager": "^3.0",
         "php-di/php-di": "^6.0",
-        "phpcompatibility/php-compatibility": "*",
+        "phpunit/phpunit": "> 7 < 10",
         "pimple/pimple": "^3.0",
         "psr/http-server-middleware": "^1.0",
         "psy/psysh": "*",
