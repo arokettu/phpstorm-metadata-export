@@ -11,13 +11,21 @@ final class TypeStrings
 {
     private const TYPE_NAMES = [
         'string',
-        'integer',
+        'int',
         'float',
-        'boolean',
+        'bool',
         'object',
         'resource',
         'null',
+        'array'
         // no array here because it needs special handling
+    ];
+
+    private const GETTYPE_TO_TYPE = [
+        'integer' => 'int',
+        'double' => 'float',
+        'boolean' => 'bool',
+        'NULL' => 'null',
     ];
 
     /**
@@ -35,12 +43,7 @@ final class TypeStrings
         }
 
         $type = \gettype($instance);
-
-        if ($type === 'double') {
-            $type = 'float';
-        } elseif ($type === 'NULL') {
-            $type = 'null';
-        }
+        $type = self::GETTYPE_TO_TYPE[$type] ?? $type;
 
         return "'{$type}'";
     }
@@ -52,8 +55,6 @@ final class TypeStrings
 
         if (\in_array($lowerTypeName, self::TYPE_NAMES)) {
             $typeString = "'{$lowerTypeName}'";
-        } elseif ($typeName === 'array') {
-            $typeString = '\\ArrayObject::class';
         } else {
             $typeString = ltrim($typeName, '\\');
             $typeString = "\\{$typeString}::class";

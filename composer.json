@@ -26,6 +26,11 @@
             "SandFox\\PhpStorm\\Metadata\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SandFox\\PhpStorm\\Metadata\\Tests\\": "tests"
+        }
+    },
     "require": {
         "php": "^7.1 | ^8.0"
     },
@@ -38,6 +43,7 @@
         "psy/psysh": "*",
         "sandfox.dev/code-standard": "^7.1@dev",
         "slim/slim": "^3.0",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "symfony/polyfill-php80": "^1.23"
     }
 }
