@@ -10,7 +10,7 @@ final class TypeStrings
     private const TYPE_NAMES = [
         'string',
         'integer',
-        'double',
+        'float',
         'boolean',
         'object',
         'resource',
@@ -28,13 +28,24 @@ final class TypeStrings
             }
         }
 
-        return "'" . gettype($instance) . "'";
+        $type = \gettype($instance);
+
+        if ($type === 'double') {
+            $type = 'float';
+        } elseif ($type === 'NULL') {
+            $type = 'null';
+        }
+
+        return "'{$type}'";
     }
 
     public static function getTypeStringByTypeName(string $typeName): string
     {
-        if (in_array($typeName, self::TYPE_NAMES)) {
-            $typeString = $typeName . '::class';
+        // treat scalar type names as case-insensitive
+        $lowerTypeName = strtolower($typeName);
+
+        if (\in_array($lowerTypeName, self::TYPE_NAMES)) {
+            $typeString = "'{$lowerTypeName}'";
         } elseif ($typeName === 'array') {
             $typeString = '\\ArrayObject::class';
         } else {
