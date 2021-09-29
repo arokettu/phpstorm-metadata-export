@@ -26,6 +26,8 @@ so the implementation is tied to the internal structure
 not covered by the semantic version compatibility promise.
 Feel free to open an issue if it is broken for some scenario.
 
-Obviously the implementation also cannot create hints for abstract factories
+Abstract factories and lazy services are not supported.
+Abstract factories support is impossible.
+Lazy services support would be too complicated.
 
 The library is tested against Zend SM version 3.3 and should work with any 3.* version

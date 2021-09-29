@@ -6,7 +6,6 @@ namespace SandFox\PhpStorm\Metadata\Tests;
 
 use Laminas\ServiceManager\ServiceManager;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
 use SandFox\PhpStorm\Metadata\Generator;
 
 class LaminasTest extends TestCase
@@ -36,7 +35,7 @@ class LaminasTest extends TestCase
             ],
             'abstract_factories' => [], // abstract factories are not supported
             'delegators' => [
-                'some_generator' => [function (ContainerInterface $container, string $name, callable $callback) {
+                'some_generator' => [function ($container, string $name, callable $callback) {
                     $gen = $callback();
                     return new \IteratorIterator($gen);
                 }], // decorated object should be in the hint
@@ -45,7 +44,7 @@ class LaminasTest extends TestCase
                 'object' => \stdClass::class,
             ],
             'initializers' => [], // we don't care
-            'lazy_services' => [],
+            'lazy_services' => [], // lazy services are not supported
             'shared' => [
                 'ao_not_shared' => false, // should not affect the result
             ]
