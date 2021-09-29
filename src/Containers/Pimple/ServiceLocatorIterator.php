@@ -8,7 +8,7 @@ use Pimple\Psr11\ServiceLocator;
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
-class ServiceLocatorIterator implements ContainerIterator
+final class ServiceLocatorIterator implements ContainerIterator
 {
     /** @var \Pimple\Container */
     private $pimple;
