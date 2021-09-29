@@ -11,7 +11,7 @@ use SandFox\PhpStorm\Metadata\StaticMap;
 /**
  * @internal
  */
-class StaticMapIterator implements ContainerIterator
+final class StaticMapIterator implements ContainerIterator
 {
     /**
      * @var StaticMap

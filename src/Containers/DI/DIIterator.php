@@ -10,7 +10,7 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use Throwable;
 use Traversable;
 
-class DIIterator implements ContainerIterator
+final class DIIterator implements ContainerIterator
 {
     /**
      * @var Container

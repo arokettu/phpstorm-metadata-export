@@ -16,7 +16,7 @@ if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
 /**
  * @internal
  */
-class ServiceManagerIterator implements ContainerIterator
+final class ServiceManagerIterator implements ContainerIterator
 {
     /**
      * @var ServiceManager

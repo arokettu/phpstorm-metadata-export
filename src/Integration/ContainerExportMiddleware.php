@@ -8,7 +8,7 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use SandFox\PhpStorm\Metadata\Generator;
 
-class ContainerExportMiddleware implements MiddlewareInterface
+final class ContainerExportMiddleware implements MiddlewareInterface
 {
     private $container;
     private $options;

@@ -11,7 +11,7 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 /**
  * @internal
  */
-class PimpleIterator implements ContainerIterator
+final class PimpleIterator implements ContainerIterator
 {
     /**
      * @var Container
