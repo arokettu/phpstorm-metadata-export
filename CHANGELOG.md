@@ -4,6 +4,20 @@
 
 ### 2.0.0
 
+*Sep 30, 2021*
+
+Breaking changes are explained in the Upgrades section in the docs.
+
+* PHP 7.1 is now required
+* Silex support was dropped
+* SandFoxMe namespace was dropped
+* Extensive refactoring and fixes in the ServiceManager support
+* Tests!
+* ``Integration\Slim\ContainerExportMiddleware`` and
+  ``Integration\Psr15\ContainerExportMiddleware`` were combined into
+  ``Integration\ContainerExportMiddleware``
+* Type strings for scalars now correspond to the values returned by ``get_debug_type()``
+
 ## 1.x
 
 ### 1.7.1
