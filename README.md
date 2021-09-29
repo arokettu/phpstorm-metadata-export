@@ -2,7 +2,7 @@
 
 [![Packagist]][Packagist Link]
 [![license]][MIT License]
-[![Code Climate]][Packagist Link]
+[![Code Climate]][Code Climate Link]
 [![Gitlab pipeline status]][pipelines]
 [![Codecov]][codecov link]
 
@@ -15,6 +15,7 @@
 [Packagist Link]: https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
 [pipelines]: https://gitlab.com/sandfox/phpstorm-metadata-export/-/pipelines
 [codecov link]: https://codecov.io/gl/sandfox/phpstorm-metadata-export/
+[Code Climate Link]: https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export
 
 Export [PhpStorm Advanced Metadata] from DI containers to enable code completion.
 
