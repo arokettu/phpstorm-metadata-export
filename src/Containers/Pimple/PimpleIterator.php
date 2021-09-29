@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
 
 use Pimple\Container;
@@ -11,6 +13,9 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
  */
 class PimpleIterator implements ContainerIterator
 {
+    /**
+     * @var Container
+     */
     private $pimple;
 
     public static function getDefaultOptions(): array

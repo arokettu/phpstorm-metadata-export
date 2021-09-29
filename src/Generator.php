@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata;
 
 use DI\Container as DI;
@@ -14,9 +16,9 @@ use Zend\ServiceManager\ServiceManager as ZendServiceManager;
 
 final class Generator
 {
-    public static function get(array $containers, array $options = [])
+    public static function get(array $containers, array $options = []): string
     {
-        if (count($containers) === 0) {
+        if (\count($containers) === 0) {
             throw new \RuntimeException('$containers must contain at least one container');
         }
 
@@ -58,7 +60,12 @@ final class Generator
         return $result !== false;
     }
 
-    private static function applyDefaults($container, $options): array
+    /**
+     * @param mixed $container
+     * @param array $options
+     * @return array
+     */
+    private static function applyDefaults($container, array $options): array
     {
         if ($container instanceof StaticMap) {
             throw new \RuntimeException('StaticMap should not be the first supplied container');
@@ -69,6 +76,10 @@ final class Generator
         return array_merge($iteratorClass::getDefaultOptions(), $options);
     }
 
+    /**
+     * @param mixed $container
+     * @return string
+     */
     private static function getIteratorClass($container): string
     {
         if ($container instanceof StaticMap) {

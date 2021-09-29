@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Common\Helpers;
 
 /**
@@ -18,10 +20,14 @@ final class TypeStrings
         // no array here because it needs special handling
     ];
 
+    /**
+     * @param mixed $instance
+     * @return string
+     */
     public static function getTypeStringByInstance($instance): string
     {
-        if (is_object($instance)) {
-            $class = get_class($instance);
+        if (\is_object($instance)) {
+            $class = \get_class($instance);
             // if not anonymous class
             if (strpos($class, "\0") === false) {
                 return "\\{$class}::class";

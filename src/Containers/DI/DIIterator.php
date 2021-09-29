@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Containers\DI;
 
 use DI\Container;
@@ -10,6 +12,9 @@ use Traversable;
 
 class DIIterator implements ContainerIterator
 {
+    /**
+     * @var Container
+     */
     private $di;
 
     public static function getDefaultOptions(): array

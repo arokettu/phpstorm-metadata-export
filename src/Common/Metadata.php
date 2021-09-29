@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Common;
 
 use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
@@ -10,7 +12,7 @@ use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
  * @internal
  * @see https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata
  */
-class Metadata
+final class Metadata
 {
     /**
      * @var ContainerIterator[]
@@ -41,7 +43,7 @@ class Metadata
 
         $mapString = implode("\n        ", $mapStrings);
 
-        $generatorClass = get_class();
+        $generatorClass = self::class;
 
         $metadata = <<<PHP
 <?php

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Containers\StaticMap;
 
 use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
@@ -11,6 +13,9 @@ use SandFox\PhpStorm\Metadata\StaticMap;
  */
 class StaticMapIterator implements ContainerIterator
 {
+    /**
+     * @var StaticMap
+     */
     private $map;
 
     public static function getDefaultOptions(): array

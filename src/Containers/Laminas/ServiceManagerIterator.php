@@ -18,6 +18,9 @@ if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
  */
 class ServiceManagerIterator implements ContainerIterator
 {
+    /**
+     * @var ServiceManager
+     */
     private $serviceManager;
 
     public static function getDefaultOptions(): array
@@ -43,9 +46,8 @@ class ServiceManagerIterator implements ContainerIterator
     {
         $servicesFunc = function () {
             $services = [];
-            $aliases = isset($this->resolvedAliases) ?
-                $this->resolvedAliases :    // 3.5 and earlier
-                $this->aliases;             // in 3.6 aliases are pre-resolved
+            $aliases = $this->resolvedAliases ??    // 3.5 and earlier
+                $this->aliases;                     // in 3.6 aliases are pre-resolved
 
             foreach ($aliases as $key => $class) {
                 $services[$key]     = $class;
