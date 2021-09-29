@@ -4,7 +4,13 @@ Supported Containers
 Pimple
 ======
 
-The library has full support for the Pimple DI version 3.*
+The library supports Pimple DI version 3.*
+
+Supported containers:
+
+* ``Pimple\Container``: full support
+* ``Pimple\Psr11\Container``: may be unstable
+* ``Pimple\Psr11\ServiceLocator``: may be unstable
 
 PHP-DI
 ======

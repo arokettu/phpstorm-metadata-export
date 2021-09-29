@@ -7,10 +7,14 @@ namespace SandFox\PhpStorm\Metadata;
 use DI\Container as DI;
 use Laminas\ServiceManager\ServiceManager as LaminasServiceManager;
 use Pimple\Container as Pimple;
+use Pimple\Psr11\Container as PimplePsr11;
+use Pimple\Psr11\ServiceLocator as PimpleServiceLocator;
 use SandFox\PhpStorm\Metadata\Common\Metadata;
 use SandFox\PhpStorm\Metadata\Containers\DI\DIIterator;
 use SandFox\PhpStorm\Metadata\Containers\Laminas\ServiceManagerIterator;
 use SandFox\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
+use SandFox\PhpStorm\Metadata\Containers\Pimple\Psr11ContainerIterator;
+use SandFox\PhpStorm\Metadata\Containers\Pimple\ServiceLocatorIterator;
 use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
 use Zend\ServiceManager\ServiceManager as ZendServiceManager;
 
@@ -82,18 +86,28 @@ final class Generator
      */
     private static function getIteratorClass($container): string
     {
+        // internal static map
         if ($container instanceof StaticMap) {
             return StaticMapIterator::class;
         }
 
+        // Pimple
         if ($container instanceof Pimple) {
             return PimpleIterator::class;
         }
+        if ($container instanceof PimplePsr11) {
+            return Psr11ContainerIterator::class;
+        }
+        if ($container instanceof PimpleServiceLocator) {
+            return ServiceLocatorIterator::class;
+        }
 
+        // Laminas
         if ($container instanceof LaminasServiceManager || $container instanceof ZendServiceManager) {
             return ServiceManagerIterator::class;
         }
 
+        // PHP-DI
         if ($container instanceof DI) {
             return DIIterator::class;
         }
