@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SandFox\PhpStorm\Metadata\Tests;
 
 use PHPUnit\Framework\TestCase;
@@ -13,7 +15,6 @@ class PimpleTest extends TestCase
     public function testPimple(): void
     {
         $pimple = new Pimple();
-        $psr11  = new Psr11($pimple);
 
         $pimple[\ArrayObject::class] = function () {
             return new \ArrayObject();
@@ -23,10 +24,16 @@ class PimpleTest extends TestCase
         };
         $pimple['int'] = 123;
 
-        $sl = new ServiceLocator($pimple, $pimple->keys());
-
         self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$pimple]));
-        self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$psr11]));
-        self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$sl]));
+
+        if (class_exists(Psr11::class)) {
+            $psr11  = new Psr11($pimple);
+            self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$psr11]));
+        }
+
+        if (class_exists(ServiceLocator::class)) {
+            $sl = new ServiceLocator($pimple, $pimple->keys());
+            self::assertEquals(file_get_contents(__DIR__ . '/data/pimple.txt'), Generator::get([$sl]));
+        }
     }
 }
