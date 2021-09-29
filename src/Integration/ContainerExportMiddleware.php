@@ -53,7 +53,7 @@ final class ContainerExportMiddleware implements MiddlewareInterface
         // remove path postfix vendor/sandfoxme/phpstorm-metadata-export/src/Integration
         $filename = $this->options['filename'] ??
             realpath(__DIR__ . '/../../../../..') .
-            '/.phpstorm.meta.php/sandfoxme_container_export_psr15.meta.php';
+            '/.phpstorm.meta.php/sandfox_container_export.meta.php';
         try {
             Generator::store($filename, [$this->container], $this->options['options'] ?? []);
         } catch (\Throwable $e) {
