@@ -7,7 +7,8 @@ Export `PhpStorm Advanced Metadata`_ from DI containers to enable code completio
 
 The library is inspired by `Pimple Container Dumper`_ for Silex
 but it doesn't require IDE plugin because it uses native PhpStorm export format.
-It also supports Slim and is extensible to support more DI containers and frameworks in future.
+It can integrate with any PSR-15 compliant framework
+and is extensible to support more DI containers and frameworks in the future.
 
 Installation
 ============
