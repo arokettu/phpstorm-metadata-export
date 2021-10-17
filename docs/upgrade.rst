@@ -5,7 +5,7 @@ Upgrade
 ==========
 
 * PHP requirement was bumped to 7.1.
-* Legacy namespace ``SandFoxMe\\`` was removed, replace it with ``SandFox\\`` if you still use it.
+* Legacy namespace ``SandFoxMe\`` was removed, replace it with ``SandFox\`` if you still use it.
 * Silex integration was removed.
   Just don't use EOL'd frameworks, switch to Slim, Mezzio or Symfony Flex.
   If you still need it, you can create your own provider based on the ``ContainerExportProvider`` from 1.x branch.
