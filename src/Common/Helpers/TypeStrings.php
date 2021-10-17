@@ -17,8 +17,7 @@ final class TypeStrings
         'object',
         'resource',
         'null',
-        'array'
-        // no array here because it needs special handling
+        'array',
     ];
 
     private const GETTYPE_TO_TYPE = [
