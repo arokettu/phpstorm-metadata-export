@@ -1,6 +1,6 @@
 from datetime import datetime
 
-project = 'PhpStorm Metadata Export'
+project = 'Metadata Exporter for PhpStorm'
 author = 'Anton Smirnov'
 copyright = '{} {}'.format(datetime.now().year, author)
 language = 'en'

@@ -1,4 +1,4 @@
-# PhpStorm Metadata Export
+# Metadata Exporter for PhpStorm
 
 [![Packagist]][Packagist Link]
 [![license]][MIT License]

@@ -1,5 +1,5 @@
-PhpStorm Metadata Export
-########################
+Metadata Exporter for PhpStorm
+##############################
 
 |Packagist| |GitLab| |GitHub| |Bitbucket| |Gitea|
 
