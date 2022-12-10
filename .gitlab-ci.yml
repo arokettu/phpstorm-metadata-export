@@ -13,7 +13,7 @@ cache:
     # install system packages
     - apt-get update && apt-get install -y git unzip
     # install extensions
-    - if [ "$INSTALL_XDEBUG" -eq 1 ]; then curl --location https://github.com/FriendsOfPHP/pickle/releases/latest/download/pickle.phar --output pickle.phar; php pickle.phar install --defaults xdebug; docker-php-ext-enable xdebug; fi
+    - if [ "$INSTALL_XDEBUG" -eq 1 ]; then pecl install xdebug; docker-php-ext-enable xdebug; fi
     # install composer
     - php -r "copy('https://composer.github.io/installer.sig', '/tmp/composer.sig');"
     - php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');"
@@ -26,7 +26,13 @@ cache:
   script:
     - composer update
     - vendor/bin/phpunit
-    # test on lowest libs
+
+# lowest version with the lowest dependencies
+test-7.1-lowest:
+  extends: .test
+  stage: test
+  image: php:7.1
+  script:
     - composer update --prefer-lowest
     - vendor/bin/phpunit
 
