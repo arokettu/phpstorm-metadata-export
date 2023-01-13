@@ -3,7 +3,7 @@
     @see https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
 -->
 <ruleset name="Custom Standard" namespace="MyProject\CS\Standard">
-    <rule ref="Sandfox"/>
+    <rule ref="SandFox_PHP71"/>
     <file>src</file>
     <file>tests</file>
     <exclude-pattern>*/vendor/*</exclude-pattern>
