@@ -2,6 +2,12 @@
 
 ## 1.x
 
+### 1.8.0
+
+*Jan 14, 2023*
+
+* Added `Arokettu\PhpStorm\Metadata` namespace alias for `SandFox\PhpStorm\Metadata` for 3.0 compatibility.
+
 ### 1.7.1
 
 *Sep 29, 2021*
