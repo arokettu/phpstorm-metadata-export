@@ -32,7 +32,7 @@ and is extensible to support more DI containers and frameworks in the future.
 Install by composer
 
 ```sh
-composer require sandfoxme/phpstorm-metadata-export --dev
+composer require arokettu/phpstorm-metadata-export --dev
 ```
 
 ## Support

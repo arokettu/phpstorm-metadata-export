@@ -1,5 +1,5 @@
 {
-    "name": "sandfoxme/phpstorm-metadata-export",
+    "name": "arokettu/phpstorm-metadata-export",
     "description": "Export PhpStorm Advanced Metadata from DI containers",
     "keywords": ["dependency injection", "phpstorm", "pimple", "slim", "silex", "code completion"],
     "homepage": "https://sandfox.dev/php/metadata-exporter-phpstorm.html",
@@ -27,7 +27,10 @@
     "autoload": {
         "psr-4": {
             "SandFox\\PhpStorm\\Metadata\\": "src"
-        }
+        },
+        "files": [
+            "autoload.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -36,7 +39,8 @@
     },
     "require": {
         "php": "^7.1 | ^8.0",
-        "psr/http-server-middleware": "^1.0"
+        "psr/http-server-middleware": "^1.0",
+        "symfony/deprecation-contracts": "^2.1 | 3.0"
     },
     "require-dev": {
         "laminas/laminas-servicemanager": "^3.0",

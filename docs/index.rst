@@ -17,7 +17,7 @@ Install by composer
 
 .. code-block:: bash
 
-    composer require sandfoxme/phpstorm-metadata-export --dev
+    composer require arokettu/phpstorm-metadata-export --dev
 
 Documentation
 =============
