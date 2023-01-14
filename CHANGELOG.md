@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.0
+
+*Jan 14, 2023*
+
+* Removed support for Zend ServiceManager, use Laminas instead
+* Base namespace was changed to `Arokettu\PhpStorm\Metadata`
+* The package was renamed to `arokettu/phpstorm-metadata-export`
+
 ## 2.x
 
 ### 2.1.0
