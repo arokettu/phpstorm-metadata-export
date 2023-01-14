@@ -63,12 +63,7 @@ final class Generator
         return $result !== false;
     }
 
-    /**
-     * @param object $container
-     * @param array $options
-     * @return array
-     */
-    private static function applyDefaults($container, array $options): array
+    private static function applyDefaults(object $container, array $options): array
     {
         if ($container instanceof StaticMap) {
             throw new \RuntimeException('StaticMap should not be the first supplied container');
@@ -79,11 +74,7 @@ final class Generator
         return array_merge($iteratorClass::getDefaultOptions(), $options);
     }
 
-    /**
-     * @param object $container
-     * @return string
-     */
-    private static function getIteratorClass($container): string
+    private static function getIteratorClass(object $container): string
     {
         // internal static map
         if ($container instanceof StaticMap) {

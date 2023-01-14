@@ -17,11 +17,7 @@ final class ContainerExportMiddleware implements MiddlewareInterface
     /** @var array */
     private $options;
 
-    /**
-     * @param object $container
-     * @param array $options
-     */
-    public function __construct($container, array $options = [])
+    public function __construct(object $container, array $options = [])
     {
         $this->container = $container;
         $this->options   = $options;
@@ -57,7 +53,7 @@ final class ContainerExportMiddleware implements MiddlewareInterface
     private function exportMetadata(): void
     {
         // try to find root path of the project (parent of vendor)
-        // remove path postfix vendor/sandfoxme/phpstorm-metadata-export/src/Integration
+        // remove path postfix vendor/arokettu/phpstorm-metadata-export/src/Integration
         $filename = $this->options['filename'] ??
             realpath(__DIR__ . '/../../../../..') .
             '/.phpstorm.meta.php/sandfox_container_export.meta.php';
