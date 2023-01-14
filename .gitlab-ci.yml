@@ -28,20 +28,15 @@ cache:
     - vendor/bin/phpunit
 
 # lowest version with the lowest dependencies
-test-7.1-lowest:
+test-7.2-lowest:
   extends: .test
   stage: test
-  image: php:7.1
+  image: php:7.2
   script:
     - composer update --prefer-lowest
     - vendor/bin/phpunit
 
 # lowest version
-test-7.1:
-  extends: .test
-  stage: test
-  image: php:7.1
-
 test-7.2:
   extends: .test
   stage: test
