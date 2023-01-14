@@ -11,6 +11,9 @@ use DI\Container;
 use Throwable;
 use Traversable;
 
+/**
+ * @internal
+ */
 final class DIIterator implements ContainerIterator
 {
     /**

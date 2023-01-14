@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Arokettu\PhpStorm\Metadata\Common\Helpers;
 
+/**
+ * @internal
+ */
 final class ErrorFormatter
 {
     public static function format(\Throwable $exception): string

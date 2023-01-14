@@ -7,6 +7,9 @@ namespace Arokettu\PhpStorm\Metadata\Containers\Pimple;
 use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use Pimple\Psr11\Container;
 
+/**
+ * @internal
+ */
 final class Psr11ContainerIterator implements ContainerIterator
 {
     /** @var PimpleIterator */

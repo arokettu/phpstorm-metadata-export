@@ -9,6 +9,9 @@ use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use Pimple\Psr11\ServiceLocator;
 
+/**
+ * @internal
+ */
 final class ServiceLocatorIterator implements ContainerIterator
 {
     /** @var \Pimple\Container */
