@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Tests;
+namespace Arokettu\PhpStorm\Metadata\Tests;
 
+use Arokettu\PhpStorm\Metadata\Generator;
 use PHPUnit\Framework\TestCase;
 use Pimple\Container as Pimple;
 use Pimple\Psr11\Container as Psr11;
 use Pimple\Psr11\ServiceLocator;
-use SandFox\PhpStorm\Metadata\Generator;
 
 class PimpleTest extends TestCase
 {

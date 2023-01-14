@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
+namespace Arokettu\PhpStorm\Metadata\Containers\Pimple;
 
+use Arokettu\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
+use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use Pimple\Psr11\ServiceLocator;
-use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
-use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
 final class ServiceLocatorIterator implements ContainerIterator
 {

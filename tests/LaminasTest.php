@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Tests;
+namespace Arokettu\PhpStorm\Metadata\Tests;
 
+use Arokettu\PhpStorm\Metadata\Generator;
 use Laminas\ServiceManager\ServiceManager;
 use PHPUnit\Framework\TestCase;
-use SandFox\PhpStorm\Metadata\Generator;
 
 class LaminasTest extends TestCase
 {

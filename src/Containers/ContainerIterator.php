@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Containers;
+namespace Arokettu\PhpStorm\Metadata\Containers;
 
 /**
  * @internal

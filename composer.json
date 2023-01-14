@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SandFox\\PhpStorm\\Metadata\\": "src"
+            "Arokettu\\PhpStorm\\Metadata\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SandFox\\PhpStorm\\Metadata\\Tests\\": "tests"
+            "Arokettu\\PhpStorm\\Metadata\\Tests\\": "tests"
         }
     },
     "require": {

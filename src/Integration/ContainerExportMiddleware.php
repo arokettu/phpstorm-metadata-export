@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Integration;
+namespace Arokettu\PhpStorm\Metadata\Integration;
 
+use Arokettu\PhpStorm\Metadata\Generator;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use SandFox\PhpStorm\Metadata\Generator;
 
 final class ContainerExportMiddleware implements MiddlewareInterface
 {

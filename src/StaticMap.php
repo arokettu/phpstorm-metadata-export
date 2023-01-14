@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata;
+namespace Arokettu\PhpStorm\Metadata;
 
 final class StaticMap extends \ArrayObject
 {

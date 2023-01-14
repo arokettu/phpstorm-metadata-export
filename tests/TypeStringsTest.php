@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Tests;
+namespace Arokettu\PhpStorm\Metadata\Tests;
 
+use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use PHPUnit\Framework\TestCase;
-use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 
 class TypeStringsTest extends TestCase
 {

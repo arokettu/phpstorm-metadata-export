@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata;
+namespace Arokettu\PhpStorm\Metadata;
 
+use Arokettu\PhpStorm\Metadata\Common\Metadata;
+use Arokettu\PhpStorm\Metadata\Containers\DI\DIIterator;
+use Arokettu\PhpStorm\Metadata\Containers\Laminas\ServiceManagerIterator;
+use Arokettu\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
+use Arokettu\PhpStorm\Metadata\Containers\Pimple\Psr11ContainerIterator;
+use Arokettu\PhpStorm\Metadata\Containers\Pimple\ServiceLocatorIterator;
+use Arokettu\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
 use DI\Container as DI;
 use Laminas\ServiceManager\ServiceManager as LaminasServiceManager;
 use Pimple\Container as Pimple;
 use Pimple\Psr11\Container as PimplePsr11;
 use Pimple\Psr11\ServiceLocator as PimpleServiceLocator;
-use SandFox\PhpStorm\Metadata\Common\Metadata;
-use SandFox\PhpStorm\Metadata\Containers\DI\DIIterator;
-use SandFox\PhpStorm\Metadata\Containers\Laminas\ServiceManagerIterator;
-use SandFox\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
-use SandFox\PhpStorm\Metadata\Containers\Pimple\Psr11ContainerIterator;
-use SandFox\PhpStorm\Metadata\Containers\Pimple\ServiceLocatorIterator;
-use SandFox\PhpStorm\Metadata\Containers\StaticMap\StaticMapIterator;
 use Zend\ServiceManager\ServiceManager as ZendServiceManager;
 
 final class Generator

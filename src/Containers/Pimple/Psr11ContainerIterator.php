@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Containers\Pimple;
+namespace Arokettu\PhpStorm\Metadata\Containers\Pimple;
 
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use Pimple\Psr11\Container;
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 
 final class Psr11ContainerIterator implements ContainerIterator
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Common;
+namespace Arokettu\PhpStorm\Metadata\Common;
 
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 
 /**
  * Class Metadata

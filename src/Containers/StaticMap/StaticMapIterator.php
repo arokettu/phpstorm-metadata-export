@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Containers\StaticMap;
+namespace Arokettu\PhpStorm\Metadata\Containers\StaticMap;
 
-use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
-use SandFox\PhpStorm\Metadata\StaticMap;
+use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
+use Arokettu\PhpStorm\Metadata\StaticMap;
 
 /**
  * @internal

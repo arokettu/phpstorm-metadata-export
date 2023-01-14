@@ -1,10 +1,10 @@
 <?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
 
-namespace SandFox\PhpStorm\Metadata\Containers\Laminas;
+namespace Arokettu\PhpStorm\Metadata\Containers\Laminas;
 
-use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
-use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
+use Arokettu\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
+use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 
 // Laminas replaces Zend so add an alias for the installed one
 

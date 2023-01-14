@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SandFox\PhpStorm\Metadata\Containers\DI;
+namespace Arokettu\PhpStorm\Metadata\Containers\DI;
 
+use Arokettu\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
+use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use DI\Container;
-use SandFox\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
-use SandFox\PhpStorm\Metadata\Common\Helpers\TypeStrings;
-use SandFox\PhpStorm\Metadata\Containers\ContainerIterator;
 use Throwable;
 use Traversable;
 
