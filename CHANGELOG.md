@@ -2,6 +2,13 @@
 
 ## 2.x
 
+### 2.1.0
+
+*Jan 14, 2023*
+
+* Deprecated support for Zend ServiceManager, use Laminas instead
+* Added `Arokettu\PhpStorm\Metadata` namespace alias for `SandFox\PhpStorm\Metadata` for 3.0 compatibility.
+
 ### 2.0.0
 
 *Sep 30, 2021*
