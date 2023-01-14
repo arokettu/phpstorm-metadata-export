@@ -1,18 +1,13 @@
-<?php // phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
+<?php
+
+declare(strict_types=1);
 
 namespace Arokettu\PhpStorm\Metadata\Containers\Laminas;
 
 use Arokettu\PhpStorm\Metadata\Common\Helpers\ErrorFormatter;
 use Arokettu\PhpStorm\Metadata\Common\Helpers\TypeStrings;
 use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
-
-// Laminas replaces Zend so add an alias for the installed one
-
-if (class_exists(\Laminas\ServiceManager\ServiceManager::class)) {
-    class_alias(\Laminas\ServiceManager\ServiceManager::class, ServiceManager::class);
-} elseif (class_exists(\Zend\ServiceManager\ServiceManager::class)) {
-    class_alias(\Zend\ServiceManager\ServiceManager::class, ServiceManager::class);
-}
+use Laminas\ServiceManager\ServiceManager;
 
 /**
  * @internal
@@ -27,7 +22,6 @@ final class ServiceManagerIterator implements ContainerIterator
         return [
             'overrides' => [
                 '\\Psr\\Container\\ContainerInterface::get(0)',
-                '\\Zend\\ServiceManager\\ServiceLocatorInterface::get(0)',
                 '\\Laminas\\ServiceManager\\ServiceLocatorInterface::get(0)',
             ],
         ];

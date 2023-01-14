@@ -36,8 +36,7 @@
     },
     "require": {
         "php": "^7.1 | ^8.0",
-        "psr/http-server-middleware": "^1.0",
-        "symfony/deprecation-contracts": "^2.1 | 3.0"
+        "psr/http-server-middleware": "^1.0"
     },
     "require-dev": {
         "laminas/laminas-servicemanager": "^3.0",

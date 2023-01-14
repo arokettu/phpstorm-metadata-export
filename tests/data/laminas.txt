@@ -12,15 +12,6 @@ namespace PHPSTORM_META {
         'some_generator' => \IteratorIterator::class,
         'stdClass' => \stdClass::class,
     ]));
-    override(\Zend\ServiceManager\ServiceLocatorInterface::get(0), map([
-        '' => '@',
-        'SplQueue' => \SplQueue::class,
-        'SplStack' => \SplStack::class,
-        'ao_not_shared' => \ArrayObject::class,
-        'errored' => \Laminas\ServiceManager\Exception\ServiceNotCreatedException::class /* Error message: "Service with name "errored" could not be created. Reason: Unable to init" */,
-        'some_generator' => \IteratorIterator::class,
-        'stdClass' => \stdClass::class,
-    ]));
     override(\Laminas\ServiceManager\ServiceLocatorInterface::get(0), map([
         '' => '@',
         'SplQueue' => \SplQueue::class,
