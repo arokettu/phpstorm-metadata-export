@@ -5,4 +5,5 @@
 /tmp*
 /reports
 /docs/build
+/docs/html
 /.phpunit.result.cache
