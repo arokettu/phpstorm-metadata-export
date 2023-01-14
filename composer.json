@@ -1,7 +1,7 @@
 {
     "name": "arokettu/phpstorm-metadata-export",
     "description": "Export PhpStorm Advanced Metadata from DI containers",
-    "keywords": ["dependency injection", "phpstorm", "pimple", "slim", "silex", "code completion"],
+    "keywords": ["dependency injection", "phpstorm", "pimple", "slim", "silex", "code completion", "dev"],
     "homepage": "https://sandfox.dev/php/metadata-exporter-phpstorm.html",
     "type": "library",
     "license": "MIT",
