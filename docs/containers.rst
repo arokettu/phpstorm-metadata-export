@@ -17,10 +17,10 @@ PHP-DI
 
 The library has full support for the PHP-DI version 6.*
 
-Laminas (Zend) ServiceManager
-=============================
+Laminas ServiceManager
+======================
 
-The library has partial support for the Laminas ServiceManager and Zend ServiceManager.
+The library has partial support for the Laminas ServiceManager.
 Please note that there's no open and public way of iterating over SM entries
 so the implementation is tied to the internal structure
 not covered by the semantic version compatibility promise.
@@ -30,4 +30,4 @@ Abstract factories and lazy services are not supported.
 Abstract factories support is impossible.
 Lazy services support would be too complicated.
 
-The library is tested against Zend SM version 3.3 and should work with any 3.* version
+The library is tested against Laminas SM version 3.3 and should work with any 3.* version

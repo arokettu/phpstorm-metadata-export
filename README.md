@@ -6,13 +6,13 @@
 [![Gitlab pipeline status]][pipelines]
 [![Codecov]][codecov link]
 
-[Packagist]: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
-[license]: https://img.shields.io/github/license/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
+[Packagist]: https://img.shields.io/packagist/v/arokettu/phpstorm-metadata-export.svg?style=flat-square
+[license]: https://img.shields.io/github/license/arokettu/phpstorm-metadata-export.svg?style=flat-square
 [Code Climate]: https://img.shields.io/codeclimate/maintainability/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
 [Gitlab pipeline status]: https://img.shields.io/gitlab/pipeline/sandfox/phpstorm-metadata-export/master.svg?style=flat-square
 [Codecov]: https://img.shields.io/codecov/c/gl/sandfox/phpstorm-metadata-export?style=flat-square
 
-[Packagist Link]: https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
+[Packagist Link]: https://packagist.org/packages/arokettu/phpstorm-metadata-export
 [pipelines]: https://gitlab.com/sandfox/phpstorm-metadata-export/-/pipelines
 [codecov link]: https://codecov.io/gl/sandfox/phpstorm-metadata-export/
 [Code Climate Link]: https://codeclimate.com/github/sandfoxme/phpstorm-metadata-export

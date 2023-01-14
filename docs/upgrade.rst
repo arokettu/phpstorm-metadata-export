@@ -1,6 +1,17 @@
 Upgrade
 #######
 
+2.x to 3.0
+==========
+
+* PHP requirement was bumped to 7.2.
+* The namespace is now ``Arokettu\``.
+
+  * 1.8.0 and 2.1.0 were released with class aliases for the ``Arokettu\`` namespace.
+* Zend ServiceManager support was dropped.
+
+  * Laminas has been available for 4 years now and the switch is relatively simple.
+
 1.x to 2.0
 ==========
 

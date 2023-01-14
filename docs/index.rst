@@ -38,8 +38,8 @@ See LICENSE.md
 .. _Pimple Container Dumper:    https://github.com/Sorien/silex-pimple-dumper
 .. _MIT License:                https://opensource.org/licenses/MIT
 
-.. |Packagist|  image:: https://img.shields.io/packagist/v/sandfoxme/phpstorm-metadata-export.svg?style=flat-square
-   :target:     https://packagist.org/packages/sandfoxme/phpstorm-metadata-export
+.. |Packagist|  image:: https://img.shields.io/packagist/v/arokettu/phpstorm-metadata-export.svg?style=flat-square
+   :target:     https://packagist.org/packages/arokettu/phpstorm-metadata-export
 .. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?style=flat-square&logo=github
    :target:     https://github.com/arokettu/phpstorm-metadata-export
 .. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?style=flat-square&logo=gitlab

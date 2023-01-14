@@ -14,7 +14,7 @@ Using Generator directly
 
     <?php
 
-    use SandFox\PhpStorm\Metadata\Generator;
+    use Arokettu\PhpStorm\Metadata\Generator;
 
     $container = new Container();
 
@@ -34,13 +34,13 @@ PSR-15
 ======
 
 The library provides a middleware implementation for PSR-15 compliant framework like Slim 4 or Mezzio.
-The classname is ``SandFox\PhpStorm\Metadata\Integration\ContainerExportMiddleware``.
+The classname is ``Arokettu\PhpStorm\Metadata\Integration\ContainerExportMiddleware``.
 
 .. code-block:: php
 
     <?php
 
-    use SandFox\PhpStorm\Metadata\Integration\ContainerExportMiddleware;
+    use Arokettu\PhpStorm\Metadata\Integration\ContainerExportMiddleware;
 
     $middleware = new ContainerExportMiddleware($container);
 
@@ -63,8 +63,8 @@ Add it to your Slim 3 app:
 
     <?php
 
+    use Arokettu\PhpStorm\Metadata\Integration\ContainerExportMiddleware;
     use Slim\App;
-    use SandFox\PhpStorm\Metadata\Integration\ContainerExportMiddleware;
 
     $app = new App();
 
