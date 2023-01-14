@@ -103,7 +103,15 @@ final class Generator
         }
 
         // Laminas
-        if ($container instanceof LaminasServiceManager || $container instanceof ZendServiceManager) {
+        if ($container instanceof LaminasServiceManager) {
+            return ServiceManagerIterator::class;
+        }
+        if ($container instanceof ZendServiceManager) {
+            trigger_deprecation(
+                'arokettu/phpstorm-metadata-export',
+                '2.1.0',
+                'Zend SerivceManager support is deprecated. Please switch to Laminas'
+            );
             return ServiceManagerIterator::class;
         }
 
