@@ -12,13 +12,18 @@
         }
     ],
     "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
         "sort-packages": true
     },
     "autoload": {
         "psr-4": {
-            "SandFox\\PhpStorm\\Metadata\\": "src",
-            "SandFoxMe\\PhpStorm\\Metadata\\": "legacy"
-        }
+            "SandFox\\PhpStorm\\Metadata\\": "src"
+        },
+        "files": [
+            "autoload.php"
+        ]
     },
     "require": {
         "php": "^7.0 || ^8.0",
