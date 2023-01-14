@@ -6,6 +6,7 @@ namespace Arokettu\PhpStorm\Metadata\Containers;
 
 /**
  * @internal
+ * @template-extends \IteratorAggregate<int, mixed>
  */
 interface ContainerIterator extends \IteratorAggregate
 {

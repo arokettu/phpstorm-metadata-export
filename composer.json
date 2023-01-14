@@ -47,6 +47,7 @@
         "sandfox.dev/code-standard": "^10@dev",
         "slim/slim": "^3.0",
         "squizlabs/php_codesniffer": "*",
-        "symfony/polyfill-php80": "^1.23"
+        "symfony/polyfill-php80": "^1.23",
+        "vimeo/psalm": "^4.30 | ^5.4"
     }
 }
