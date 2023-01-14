@@ -9,7 +9,7 @@ namespace Arokettu\PhpStorm\Metadata\Common\Helpers;
  */
 final class TypeStrings
 {
-    const TYPE_NAMES = [
+    private const TYPE_NAMES = [
         'string',
         'int',
         'float',
