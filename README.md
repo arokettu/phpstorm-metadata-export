@@ -19,7 +19,7 @@
 
 Export [PhpStorm Advanced Metadata] from DI containers to enable code completion.
 
-The library is inspired by [Pimple Container Dumper] for Silex
+The library is inspired by [Pimple Container Dumper] for Silex,
 but it doesn't require IDE plugin because it uses native PhpStorm export format.
 It can integrate with any PSR-15 compliant framework
 and is extensible to support more DI containers and frameworks in the future.
@@ -48,7 +48,7 @@ Integration middlewares for:
 * [PSR-15] (Mezzio, Slim 4, ...)
 * [Slim 3]
 
-[Pimple]:   https://pimple.symfony.com/
+[Pimple]:   https://github.com/silexphp/Pimple
 [PHP-DI]:   http://php-di.org/
 [Laminas ServiceManager]:   https://docs.laminas.dev/laminas-servicemanager/
 [Slim 3]:   https://www.slimframework.com/
