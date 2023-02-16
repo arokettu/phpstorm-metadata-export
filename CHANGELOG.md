@@ -10,6 +10,13 @@
 
 ## 2.x
 
+### 2.1.1
+
+*Feb 16, 2023*
+
+* Fixed invalid dependency declaration for symfony/deprecation-contracts.
+  3.x is now properly installable. 
+
 ### 2.1.0
 
 *Jan 14, 2023*
