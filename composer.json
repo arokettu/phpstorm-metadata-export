@@ -48,7 +48,7 @@
         "phpunit/phpunit": ">= 7 < 10",
         "pimple/pimple": "^3.0",
         "psy/psysh": "*",
-        "sandfox.dev/code-standard": "^10@dev",
+        "sandfox.dev/code-standard": "^1",
         "slim/slim": "^3.0",
         "squizlabs/php_codesniffer": "*",
         "symfony/polyfill-php80": "^1.23"
