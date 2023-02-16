@@ -63,6 +63,6 @@ Also on Read the Docs: <https://phpstorm-metadata-export.readthedocs.io/>
 ## License
 
 The library is available as open source under the terms of the [MIT License].
-See LICENSE.md
+See [LICENSE.md][MIT License].
 
-[MIT License]: https://opensource.org/licenses/MIT
+[MIT License]: ./LICENSE.md
