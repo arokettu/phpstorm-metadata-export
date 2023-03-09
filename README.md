@@ -54,6 +54,26 @@ Integration middlewares for:
 [Slim 3]:   https://www.slimframework.com/
 [PSR-15]:   https://www.php-fig.org/psr/psr-15/
 
+## Example
+
+```php
+<?php
+
+$container = new \DI\Container();
+// .phpstorm.meta.php must be in a root path of your project
+$storePath = __DIR__ '/.phpstorm.meta.php/sandfox_container_export.meta.php';
+
+// just generate the file content
+$metaPhp = \Arokettu\PhpStorm\Metadata\Generator::get([$container]);
+file_put_contents($storePath, $metaPhp);
+
+// use middleware (Slim 4 example)
+$app = new \Slim\App();
+$app->addMiddleware(new \Arokettu\PhpStorm\Metadata\Integration\ContainerExportMiddleware($container, [
+    'filename' => $storePath,
+]));
+```
+
 ## Documentation
 
 Read full documentation at <https://sandfox.dev/php/metadata-exporter-phpstorm.html>
