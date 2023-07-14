@@ -39,9 +39,9 @@ composer require arokettu/phpstorm-metadata-export --dev
 
 Supported containers:
 
-* [Pimple]
-* [PHP-DI]
-* [Laminas ServiceManager] (permanently unstable)
+* [Pimple] (v3)
+* [PHP-DI] (v6, v7)
+* [Laminas ServiceManager] (v3, permanently unstable)
 
 Integration middlewares for:
 

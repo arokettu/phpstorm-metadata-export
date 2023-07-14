@@ -15,7 +15,7 @@ Supported containers:
 PHP-DI
 ======
 
-The library has full support for the PHP-DI version 6.*
+The library has full support for the PHP-DI versions 6.* and 7.*
 
 Laminas ServiceManager
 ======================
