@@ -35,7 +35,7 @@ Install by composer
 composer require arokettu/phpstorm-metadata-export --dev
 ```
 
-## Support
+## Container Support
 
 Supported containers:
 
@@ -79,6 +79,12 @@ $app->addMiddleware(new \Arokettu\PhpStorm\Metadata\Integration\ContainerExportM
 Read full documentation at <https://sandfox.dev/php/metadata-exporter-phpstorm.html>
 
 Also on Read the Docs: <https://phpstorm-metadata-export.readthedocs.io/>
+
+## Support
+
+Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/phpstorm-metadata-export/-/issues>
+
+Feel free to ask any questions in our room on Gitter: <https://gitter.im/arokettu/community>
 
 ## License
 
