@@ -41,7 +41,7 @@ Supported containers:
 
 * [Pimple] (v3)
 * [PHP-DI] (v6, v7)
-* [Laminas ServiceManager] (v3, permanently unstable)
+* [Laminas ServiceManager] (v3, v4; permanently unstable)
 
 Integration middlewares for:
 

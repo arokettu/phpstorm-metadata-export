@@ -30,4 +30,4 @@ Abstract factories and lazy services are not supported.
 Abstract factories support is impossible.
 Lazy services support would be too complicated.
 
-The library is tested against Laminas SM version 3.3 and should work with any 3.* version
+The library is tested against Laminas SM version 3.3 and should work with any 3.*/4.* version.
