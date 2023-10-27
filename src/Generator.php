@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Arokettu\PhpStorm\Metadata;
 
 use Arokettu\PhpStorm\Metadata\Common\Metadata;
+use Arokettu\PhpStorm\Metadata\Containers\ContainerIterator;
 use Arokettu\PhpStorm\Metadata\Containers\DI\DIIterator;
 use Arokettu\PhpStorm\Metadata\Containers\Laminas\ServiceManagerIterator;
 use Arokettu\PhpStorm\Metadata\Containers\Pimple\PimpleIterator;
@@ -44,7 +45,7 @@ final class Generator
      */
     public static function store(string $filename, array $containers, array $options = []): bool
     {
-        $dirname = dirname($filename);
+        $dirname = \dirname($filename);
 
         if (!file_exists($dirname)) {
             $result = mkdir($dirname, 0777, true);
@@ -74,6 +75,9 @@ final class Generator
         return array_merge($iteratorClass::getDefaultOptions(), $options);
     }
 
+    /**
+     * @return class-string<ContainerIterator>
+     */
     private static function getIteratorClass(object $container): string
     {
         // internal static map

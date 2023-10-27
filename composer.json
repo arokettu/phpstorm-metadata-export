@@ -40,12 +40,13 @@
             "Arokettu\\PhpStorm\\Metadata\\Tests\\": "tests"
         }
     },
+    "minimum-stability": "beta",
     "require": {
         "php": "^7.2 | ^8.0",
         "psr/http-server-middleware": "^1.0"
     },
     "require-dev": {
-        "laminas/laminas-servicemanager": "^3.0",
+        "laminas/laminas-servicemanager": "^3.0 | ^4.0",
         "php-di/php-di": "^6.0 | ^7.0",
         "phpunit/phpunit": ">= 7 < 10",
         "pimple/pimple": "^3.0",
