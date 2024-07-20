@@ -14,6 +14,8 @@ class PhpDITest extends TestCase
 {
     public function testPimple(): void
     {
+        $error = error_reporting(E_ALL & ~E_DEPRECATED); // Ignore PHP-DI deprecations
+
         $di = new Container();
 
         $di->set(\ArrayObject::class, create()->constructor([], 0, \ArrayIterator::class));
@@ -28,5 +30,7 @@ class PhpDITest extends TestCase
         });
 
         self::assertEquals(file_get_contents(__DIR__ . '/data/di.txt'), Generator::get([$di]));
+
+        error_reporting($error);
     }
 }
