@@ -2,6 +2,12 @@
 
 ## 3.x
 
+### 3.0.1
+
+*Jul 28, 2024*
+
+* Reclassify incorrect container order as an `InvalidArgumentException`
+
 ### 3.0.0
 
 *Jan 14, 2023*
