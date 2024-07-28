@@ -67,7 +67,7 @@ final class Generator
     private static function applyDefaults(object $container, array $options): array
     {
         if ($container instanceof StaticMap) {
-            throw new \RuntimeException('StaticMap should not be the first supplied container');
+            throw new \InvalidArgumentException('StaticMap should not be the first supplied container');
         }
 
         $iteratorClass = self::getIteratorClass($container);
